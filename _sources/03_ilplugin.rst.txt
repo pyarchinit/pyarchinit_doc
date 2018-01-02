@@ -83,6 +83,32 @@ Immagine qui
 
 Nella parte destra è possibile controllare lo stato del database: in uso, in modalità ricerca o inserimento di un nuovo record (13). Viene segnalato se il set di records ricercati è ordinato o meno (14), il numero del record corrente (15) e il numero di records totali consultabili (14). Il numero di record totali si riferisce alla cosiddetta “istanza di database”, ovvero non necessariamente a tutti i record presenti nella tabella, ma al complesso di record richiamati dal database, che può ovviamente variare da uno a molti oppure tutti, a seconda della ricerca impostata. La modalità “usa” si riferisce al momento in cui è possibile consultare oppure modificare i record. L’ordinamento ci informerà se l’istanza di database è stata ordinata in base ad un criterio, mentre il numero del record, corrisponde alla posizione del record visualizzato in base all’istanza di database e al criterio di ordinamento scelto.
 
+3.2.2 Scheda Sito
+---------------------
+La scheda di sito serve ad impostare il nome del luogo o del progetto in cui si verifica un'indagine. Al momento si tratta di una scheda aperta composta essenzialmente da 7 campi:
+- Campo Sito: una volta salvato il nome del sito esso verrà caricato automaticamente nella lista a tendina di questa scheda e in tutte le altre schede che si appoggiano alla scheda di sito (strutture, reperti, ecc.). E' buona norma creare prima il nome del sito per sfruttarlo nelle altre schede e collegarlo con una mappa valori a tutti i layer che usano il sito.
+*Campo Definizione sito: la lista a tendina recupera i dati dal Thesaurus sigle.
+*Campo Descrizione sito: campo aperto per la descrizione del sito.
+*Campo Nazione: lista a tendina aperta gestita dalla GUI con il solo nome Italia.
+*Campo Regione: lista a tendina aperta gestita dalla GUI con le regioni italiane.
+*Campo Provincia: lista a tendina aperta gestita dalla GUI con le provincie italiane.
+*Campo Comune: lista a tendina aperta gestita dalla GUI. Nessun valore inserito.
+
+
+.. image:: ./_images/img_322a.PNG
+   :scale: 80 %
+   :align: center
+
+
+La scheda possiede una sezione Tools:
+
+*Possibilità di caricare i layer per il disegno di tutti i layer informativi. 
+*Caricamento dei layer informativi legati solo al sito analizzato.
+*Caricamento del layer puntuale del sito.
+*Caricamento del layer puntuale in base ad una ricerca.
+*Generazione arbitraria di schede US impostando il numero di schede da creare, l'area di scavo di riferimento (l'id US è composto inderogabilmente da sito, area, us), un valore di partenza scalato di una unità rispetto al primo che vogliamo far apparire; ad esempio schede da 1 a 10 di Area 2, sarà necessario impostare 10, 2 e come numero di partenza 0.
+
+Problemi e miglioramenti: Non possiede una esportazione PDF della scheda di sito. E' in corso la realizzazione di un sistema di esportazione dei report dell'intero sito.
 
 3.2.3 Scheda US
 ---------------------
@@ -249,26 +275,26 @@ e Inkscape.
 
 La scheda di Periodizzazione serve a definire la cronologia relativa della stratigrafia, scandendola in periodi e fasi. Un periodo di un sito archeologico può essere variabile a seconda del contesto, ma in linea di massima serve a specificare un luogo per la sua definizione d'uso all'interno di un determinato lasso di tempo. Per esempio una villa di epoca romana che diviene in seguito un cimitero e infine una pieve, avrà sostanzialmente tre periodi:
 
-Periodo I: VI – VIII secolo – Pieve con battistero e cimitero annesso
-Periodo II: VI-VII secolo – Riuso cimiteriale del sito
-Periodo III: I-V secolo d.C. - Villa romana
+*Periodo I: VI – VIII secolo – Pieve con battistero e cimitero annesso
+*Periodo II: VI-VII secolo – Riuso cimiteriale del sito
+*Periodo III: I-V secolo d.C. - Villa romana
 
 All'interno di questi periodi potranno essere individuate le singole fasi di uso, in base ad espansioni o modifiche degli ambienti, aggiunta di infrastrutture, momenti di abbandono interni al periodo ecc.
 
-Periodo 1: VI – VIII secolo – Pieve con battistero e cimitero annesso
+*Periodo 1: VI – VIII secolo – Pieve con battistero e cimitero annesso
 
-Fase 1: abbandono
-Fase 2: modifica dell'orientamento della pieve
-Fase 3: primo insediamento plebano
+*Fase 1: abbandono
+*Fase 2: modifica dell'orientamento della pieve
+*Fase 3: primo insediamento plebano
 
-Periodo 2: VI-VII secolo – Riuso cimiteriale del sito
-Fase 1: massima di espansione
-Fase 2: impianto del primo cimitero
+*Periodo 2: VI-VII secolo – Riuso cimiteriale del sito
+*Fase 1: massima di espansione
+*Fase 2: impianto del primo cimitero
 
-Periodo 3: I-V secolo d.C. - Villa romana
-Fase 1: restringimento dell'insediamento
-Fase 2: espansione e aggiunta di nuovi ambienti
-Fase 3: primo impianto della villa
+*Periodo 3: I-V secolo d.C. - Villa romana
+*Fase 1: restringimento dell'insediamento
+*Fase 2: espansione e aggiunta di nuovi ambienti
+*Fase 3: primo impianto della villa
 
 Come si può intuire dalla soprastante scansione cronologica, i periodi sono definiti dal più recente al più antico da un numero intero che va da n a n+1, per poter sfruttare i numeri a livello informatico per gli algoritmi di ordinamento e per poter aggiungere periodi e fasi più antiche, lasciando aperta la ricerca.
 Istintivamente infatti si tenderebbe ad assegnare il numero più basso al periodo più antico, tuttavia questo metterebbe un punto fermo nell'analisi, nel caso emergessero periodi più antichi che obbligherebbero o a rivedere l'ordinamento dei periodi oppure ad assegnare numeri negativi al di sotto Periodo 1.
@@ -288,12 +314,12 @@ La scheda di struttura oltre ad assegnare una sigla e una definizione struttural
 raggruppamento di US, permette di andare a specificare in una serie di sezioni apposite i singoli elementi che la costituiscono.
 La parte alta dell'interfaccia presenta tre campi che fanno da identificatore: Sito, Sigla Struttura, Numero; la numerazione è progressiva a partire dalla coppia di valori Sito+Sigla struttura, del tipo:
 
-Sito 1, TB1
-Sito 1, TB2
-Sito 1, TB3
-Sito 1, ED1
-Sito 1, ED2
-Sito 1, FO1
+*Sito 1, TB1
+*Sito 1, TB2
+*Sito 1, TB3
+*Sito 1, ED1
+*Sito 1, ED2
+*Sito 1, FO1
 
 Al di sotto dei campi che costituiscono l'identificatore di struttura, ci sono altre tre caselle in cui è possibile andare a categorizzare il tipo di struttura schedata. Al momento il sistema è in via di elaborazione e le liste sono lasciate aperte. Nel primo campo si esplicita la categoria alla quale si riferisce, nel secondo la tipologia di struttura e infine la sua definizione. Un esempio che riportiamo qua sotto è riferito ad una Tomba con cassa:
 

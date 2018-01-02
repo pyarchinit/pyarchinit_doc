@@ -103,6 +103,36 @@ Il pulsate con scheda bianca (10) apre una finestra di dialogo per impostare l�
 <p>Immagine qui</p>
 <p>Nella parte destra è possibile controllare lo stato del database: in uso, in modalità ricerca o inserimento di un nuovo record (13). Viene segnalato se il set di records ricercati è ordinato o meno (14), il numero del record corrente (15) e il numero di records totali consultabili (14). Il numero di record totali si riferisce alla cosiddetta “istanza di database”, ovvero non necessariamente a tutti i record presenti nella tabella, ma al complesso di record richiamati dal database, che può ovviamente variare da uno a molti oppure tutti, a seconda della ricerca impostata. La modalità “usa” si riferisce al momento in cui è possibile consultare oppure modificare i record. L’ordinamento ci informerà se l’istanza di database è stata ordinata in base ad un criterio, mentre il numero del record, corrisponde alla posizione del record visualizzato in base all’istanza di database e al criterio di ordinamento scelto.</p>
 </div>
+<div class="section" id="scheda-sito">
+<h3>3.2.2 Scheda Sito<a class="headerlink" href="#scheda-sito" title="Permalink to this headline">¶</a></h3>
+<p>Alla scheda di sito si accede tramite il pulsante della Toolbar di pyArchInit:</p>
+<img alt="./_images/img_322button.PNG" src="./_images/img_322button.PNG" />
+<p>La scheda di sito serve ad impostare il nome del luogo o del progetto in cui si verifica un&#8217;indagine. Al momento si tratta di una scheda aperta composta essenzialmente da 7 campi:
+- Campo Sito: una volta salvato il nome del sito esso verrà caricato automaticamente nella lista a tendina di questa scheda e in tutte le altre schede che si appoggiano alla scheda di sito (strutture, reperti, ecc.). E&#8217; buona norma creare prima il nome del sito per sfruttarlo nelle altre schede e collegarlo con una mappa valori a tutti i layer che usano il sito.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Campo Definizione sito: la lista a tendina recupera i dati dal Thesaurus sigle.</li>
+<li>Campo Descrizione sito: campo aperto per la descrizione del sito.</li>
+<li>Campo Nazione: lista a tendina aperta gestita dalla GUI con il solo nome Italia.</li>
+<li>Campo Regione: lista a tendina aperta gestita dalla GUI con le regioni italiane.</li>
+<li>Campo Provincia: lista a tendina aperta gestita dalla GUI con le provincie italiane.</li>
+<li>Campo Comune: lista a tendina aperta gestita dalla GUI. Nessun valore inserito.</li>
+</ul>
+</div></blockquote>
+<a class="reference internal image-reference" href="./_images/img_322a.PNG"><img alt="./_images/img_322a.PNG" class="align-center" src="./_images/img_322a.PNG" /></a>
+<p>La scheda possiede una sezione Tools:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Possibilità di caricare i layer per il disegno di tutti i layer informativi.</li>
+<li>Caricamento dei layer informativi legati solo al sito analizzato.</li>
+<li>Caricamento del layer puntuale del sito.</li>
+<li>Caricamento del layer puntuale in base ad una ricerca.</li>
+<li>Generazione arbitraria di schede US impostando il numero di schede da creare, l&#8217;area di scavo di riferimento (l&#8217;id US è composto inderogabilmente da sito, area, us), un valore di partenza scalato di una unità rispetto al primo che vogliamo far apparire; ad esempio schede da 1 a 10 di Area 2, sarà necessario impostare 10, 2 e come numero di partenza 0.</li>
+</ul>
+</div></blockquote>
+<img alt="./_images/img_322b.PNG" src="./_images/img_322b.PNG" />
+<p>Problemi e miglioramenti: Non possiede una esportazione PDF della scheda di sito. E&#8217; in corso la realizzazione di un sistema di esportazione dei report dell&#8217;intero sito.</p>
+</div>
 <div class="section" id="scheda-us">
 <h3>3.2.3 Scheda US<a class="headerlink" href="#scheda-us" title="Permalink to this headline">¶</a></h3>
 <p>La scheda US, è un adattamento della scheda ministeriale emessa dall&#8217;ICCD. È divisa in varie sezioni a seconda della tipologia di dato.
@@ -241,21 +271,21 @@ Dopo aver realizzato una ricerca sulla scheda US cliccare sul pulsante “Export
 <div class="section" id="scheda-periodizzazione">
 <h3>3.2.4 Scheda Periodizzazione<a class="headerlink" href="#scheda-periodizzazione" title="Permalink to this headline">¶</a></h3>
 <p>La scheda di Periodizzazione serve a definire la cronologia relativa della stratigrafia, scandendola in periodi e fasi. Un periodo di un sito archeologico può essere variabile a seconda del contesto, ma in linea di massima serve a specificare un luogo per la sua definizione d&#8217;uso all&#8217;interno di un determinato lasso di tempo. Per esempio una villa di epoca romana che diviene in seguito un cimitero e infine una pieve, avrà sostanzialmente tre periodi:</p>
-<p>Periodo I: VI – VIII secolo – Pieve con battistero e cimitero annesso
-Periodo II: VI-VII secolo – Riuso cimiteriale del sito
-Periodo III: I-V secolo d.C. - Villa romana</p>
+<p><a href="#id1"><span class="problematic" id="id2">*</span></a>Periodo I: VI – VIII secolo – Pieve con battistero e cimitero annesso
+<a href="#id3"><span class="problematic" id="id4">*</span></a>Periodo II: VI-VII secolo – Riuso cimiteriale del sito
+<a href="#id5"><span class="problematic" id="id6">*</span></a>Periodo III: I-V secolo d.C. - Villa romana</p>
 <p>All&#8217;interno di questi periodi potranno essere individuate le singole fasi di uso, in base ad espansioni o modifiche degli ambienti, aggiunta di infrastrutture, momenti di abbandono interni al periodo ecc.</p>
-<p>Periodo 1: VI – VIII secolo – Pieve con battistero e cimitero annesso</p>
-<p>Fase 1: abbandono
-Fase 2: modifica dell&#8217;orientamento della pieve
-Fase 3: primo insediamento plebano</p>
-<p>Periodo 2: VI-VII secolo – Riuso cimiteriale del sito
-Fase 1: massima di espansione
-Fase 2: impianto del primo cimitero</p>
-<p>Periodo 3: I-V secolo d.C. - Villa romana
-Fase 1: restringimento dell&#8217;insediamento
-Fase 2: espansione e aggiunta di nuovi ambienti
-Fase 3: primo impianto della villa</p>
+<p><a href="#id7"><span class="problematic" id="id8">*</span></a>Periodo 1: VI – VIII secolo – Pieve con battistero e cimitero annesso</p>
+<p><a href="#id9"><span class="problematic" id="id10">*</span></a>Fase 1: abbandono
+<a href="#id11"><span class="problematic" id="id12">*</span></a>Fase 2: modifica dell&#8217;orientamento della pieve
+<a href="#id13"><span class="problematic" id="id14">*</span></a>Fase 3: primo insediamento plebano</p>
+<p><a href="#id15"><span class="problematic" id="id16">*</span></a>Periodo 2: VI-VII secolo – Riuso cimiteriale del sito
+<a href="#id17"><span class="problematic" id="id18">*</span></a>Fase 1: massima di espansione
+<a href="#id19"><span class="problematic" id="id20">*</span></a>Fase 2: impianto del primo cimitero</p>
+<p><a href="#id21"><span class="problematic" id="id22">*</span></a>Periodo 3: I-V secolo d.C. - Villa romana
+<a href="#id23"><span class="problematic" id="id24">*</span></a>Fase 1: restringimento dell&#8217;insediamento
+<a href="#id25"><span class="problematic" id="id26">*</span></a>Fase 2: espansione e aggiunta di nuovi ambienti
+<a href="#id27"><span class="problematic" id="id28">*</span></a>Fase 3: primo impianto della villa</p>
 <p>Come si può intuire dalla soprastante scansione cronologica, i periodi sono definiti dal più recente al più antico da un numero intero che va da n a n+1, per poter sfruttare i numeri a livello informatico per gli algoritmi di ordinamento e per poter aggiungere periodi e fasi più antiche, lasciando aperta la ricerca.
 Istintivamente infatti si tenderebbe ad assegnare il numero più basso al periodo più antico, tuttavia questo metterebbe un punto fermo nell&#8217;analisi, nel caso emergessero periodi più antichi che obbligherebbero o a rivedere l&#8217;ordinamento dei periodi oppure ad assegnare numeri negativi al di sotto Periodo 1.
 All&#8217;interno di un periodo le fasi vengono definite con il numero più basso per la più antica e con la cifra più alta per la più recente.
@@ -270,12 +300,12 @@ Uno script genera nella scheda US il codice per poter richiamare tale pavimentaz
 <p>La scheda di struttura oltre ad assegnare una sigla e una definizione strutturale ad un
 raggruppamento di US, permette di andare a specificare in una serie di sezioni apposite i singoli elementi che la costituiscono.
 La parte alta dell&#8217;interfaccia presenta tre campi che fanno da identificatore: Sito, Sigla Struttura, Numero; la numerazione è progressiva a partire dalla coppia di valori Sito+Sigla struttura, del tipo:</p>
-<p>Sito 1, TB1
-Sito 1, TB2
-Sito 1, TB3
-Sito 1, ED1
-Sito 1, ED2
-Sito 1, FO1</p>
+<p><a href="#id29"><span class="problematic" id="id30">*</span></a>Sito 1, TB1
+<a href="#id31"><span class="problematic" id="id32">*</span></a>Sito 1, TB2
+<a href="#id33"><span class="problematic" id="id34">*</span></a>Sito 1, TB3
+<a href="#id35"><span class="problematic" id="id36">*</span></a>Sito 1, ED1
+<a href="#id37"><span class="problematic" id="id38">*</span></a>Sito 1, ED2
+<a href="#id39"><span class="problematic" id="id40">*</span></a>Sito 1, FO1</p>
 <p>Al di sotto dei campi che costituiscono l&#8217;identificatore di struttura, ci sono altre tre caselle in cui è possibile andare a categorizzare il tipo di struttura schedata. Al momento il sistema è in via di elaborazione e le liste sono lasciate aperte. Nel primo campo si esplicita la categoria alla quale si riferisce, nel secondo la tipologia di struttura e infine la sua definizione. Un esempio che riportiamo qua sotto è riferito ad una Tomba con cassa:</p>
 <p>Categoria: Struttura funeraria
 Tipologia: Tomba
@@ -480,6 +510,7 @@ Infine caricare il layer pyarchinit_us_view, aprire lo stile us_caratterizzazion
 <li><a class="reference internal" href="#la-struttura-del-plugin">3.1 La struttura del plugin</a></li>
 <li><a class="reference internal" href="#introduzione-alle-schede">3.2 Introduzione alle schede</a><ul>
 <li><a class="reference internal" href="#dbms-toolbar">3.2.1 DBMS Toolbar</a></li>
+<li><a class="reference internal" href="#scheda-sito">3.2.2 Scheda Sito</a></li>
 <li><a class="reference internal" href="#scheda-us">3.2.3 Scheda US</a></li>
 <li><a class="reference internal" href="#funzioni-della-scheda-us">3.2.3.1 Funzioni della scheda US</a></li>
 <li><a class="reference internal" href="#scheda-periodizzazione">3.2.4 Scheda Periodizzazione</a></li>
