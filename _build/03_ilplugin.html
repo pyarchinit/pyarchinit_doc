@@ -107,10 +107,10 @@ Il pulsate con scheda bianca (10) apre una finestra di dialogo per impostare l�
 <h3>3.2.2 Scheda Sito<a class="headerlink" href="#scheda-sito" title="Permalink to this headline">¶</a></h3>
 <p>Alla scheda di sito si accede tramite il pulsante della Toolbar di pyArchInit:</p>
 <img alt="./_images/img_322button.PNG" src="./_images/img_322button.PNG" />
-<p>La scheda di sito serve ad impostare il nome del luogo o del progetto in cui si verifica un&#8217;indagine. Al momento si tratta di una scheda aperta composta essenzialmente da 7 campi:
-- Campo Sito: una volta salvato il nome del sito esso verrà caricato automaticamente nella lista a tendina di questa scheda e in tutte le altre schede che si appoggiano alla scheda di sito (strutture, reperti, ecc.). E&#8217; buona norma creare prima il nome del sito per sfruttarlo nelle altre schede e collegarlo con una mappa valori a tutti i layer che usano il sito.</p>
-<blockquote>
-<div><ul class="simple">
+<dl class="docutils">
+<dt>La scheda di sito serve ad impostare il nome del luogo o del progetto in cui si verifica un&#8217;indagine. Al momento si tratta di una scheda aperta composta essenzialmente da 7 campi:</dt>
+<dd><ul class="first last simple">
+<li>Campo Sito: una volta salvato il nome del sito esso verrà caricato automaticamente nella lista a tendina di questa scheda e in tutte le altre schede che si appoggiano alla scheda di sito (strutture, reperti, ecc.). E&#8217; buona norma creare prima il nome del sito per sfruttarlo nelle altre schede e collegarlo con una mappa valori a tutti i layer che usano il sito.</li>
 <li>Campo Definizione sito: la lista a tendina recupera i dati dal Thesaurus sigle.</li>
 <li>Campo Descrizione sito: campo aperto per la descrizione del sito.</li>
 <li>Campo Nazione: lista a tendina aperta gestita dalla GUI con il solo nome Italia.</li>
@@ -118,7 +118,8 @@ Il pulsate con scheda bianca (10) apre una finestra di dialogo per impostare l�
 <li>Campo Provincia: lista a tendina aperta gestita dalla GUI con le provincie italiane.</li>
 <li>Campo Comune: lista a tendina aperta gestita dalla GUI. Nessun valore inserito.</li>
 </ul>
-</div></blockquote>
+</dd>
+</dl>
 <a class="reference internal image-reference" href="./_images/img_322a.PNG"><img alt="./_images/img_322a.PNG" class="align-center" src="./_images/img_322a.PNG" /></a>
 <p>La scheda possiede una sezione Tools:</p>
 <blockquote>
@@ -133,20 +134,68 @@ Il pulsate con scheda bianca (10) apre una finestra di dialogo per impostare l�
 <img alt="./_images/img_322b.PNG" src="./_images/img_322b.PNG" />
 <p>Problemi e miglioramenti: Non possiede una esportazione PDF della scheda di sito. E&#8217; in corso la realizzazione di un sistema di esportazione dei report dell&#8217;intero sito.</p>
 </div>
-<div class="section" id="scheda-us">
-<h3>3.2.3 Scheda US<a class="headerlink" href="#scheda-us" title="Permalink to this headline">¶</a></h3>
-<p>La scheda US, è un adattamento della scheda ministeriale emessa dall&#8217;ICCD. È divisa in varie sezioni a seconda della tipologia di dato.
-Dati descrittivi
-Sezione per l&#8217;inserimento della descrizione stratigrafica dello strato e della sua interpretazione estesa.</p>
-<p>Dati di scavo, Periodizzazione, Rapporti stratigrafici, Struttura
-Sezione per l&#8217;inserimento della Periodizzazione iniziale e finale, attività e sigla della struttura di appartenenza. Qui vengono anche inseriti altri dati come l&#8217;anno di scavo e il metodo di scavo utilizzato. Infine, con un formato totalmente innovativo, vengono segnalati i singoli rapporti stratigrafici, presentati in forma di tabella, dove ogni singola riga rappresenta un rapporto stratigrafico.</p>
+<div class="section" id="scheda-us-usm">
+<h3>3.2.3 Scheda US/USM<a class="headerlink" href="#scheda-us-usm" title="Permalink to this headline">¶</a></h3>
+<p>Alla scheda US/USM si accede tramite il pulsante della Toolbar di pyArchInit:</p>
+<img alt="./_images/img_323button.PNG" src="./_images/img_323button.PNG" />
+<p>La scheda US, è un adattamento della scheda ministeriale emessa dall&#8217;ICCD.</p>
+<p>È divisa in varie sezioni a seconda della tipologia di dato.</p>
+<img alt="./_images/img_323a.PNG" src="./_images/img_323a.PNG" />
+<p>Nella porzione in alto fissa, sono presenti i campi per l&#8217;identificazione dell&#8217;US/USM e relativi dati di localizzazione topografica all&#8217;interno del sito:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Campo sito: la lista a tendina recupera i dati dalla Scheda Sito. Campo obbligatorio per l&#8217;ID.</li>
+<li>Campo Area: lista di valori chiusa controllata dalla GUI di tipo numerico. Campo obbligatorio per l&#8217;ID.</li>
+<li>Campo US/USM: Campo aperto per l&#8217;assegnazione del numero di US. Solo Numerico. Campo obbligatorio per l&#8217;ID.</li>
+<li>Campo Unità Tipo: Campo chiuso per l&#8217;assegnazione del tipo di US:  US oppure USM</li>
+<li>Campo Settore: Campo aperto per poter segnalare il settore di scavo.</li>
+<li>Campo Quadrato/parete: Campo aperto per poter segnalare il quadrato di scavo o la parete dell&#8217;USM.</li>
+<li>Campo Ambiente: Campo aperto per poter segnalare l&#8217;eventuale ambiente di scavo. Può ripetere il valore dell&#8217;Area di scavo, oppure vi si può assegnare un Ambiente di scavo. Non identifica necessariamente un ambiente antico, ma anche una divisione odierna dello scavo.</li>
+<li>Campo Saggio: Campo aperto per poter segnalare se l&#8217;US appartiene ad un saggio di scavo.</li>
+<li>Campo Definizione stratigrafica: Campo con lista a tendina aperta. Progettato per riprendere i dati dal Thesaurus che deve essere implementato, viene lasciato aperto per poter permettere differenti valori da quelli presenti. Si tratta della definizione oggettiva dell&#8217;US/USM.</li>
+<li>Campo Definizione interpretata: Campo con lista a tendina aperta. Progettato per riprendere i dati dal Thesaurus che deve essere implementato, viene lasciato aperto per poter permettere differenti valori da quelli presenti. Si tratta della definizione basata sull&#8217;interpretazione dell&#8217;US/US.</li>
+</ul>
+</div></blockquote>
+<p>Dati descrittivi</p>
+<p>Sezione per l&#8217;inserimento della descrizione stratigrafica dello strato e della sua interpretazione estesa.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Campo descrizione: Campo aperto per la descrizione oggettiva dell&#8217;US/USM. Non deve contenere dati interpretativi. Non è permessa la ricerca al suo interno.</li>
+<li>Campo interpretazione: Campo aperto per la descrizione interpretativa dell&#8217;US/USM. Non è permessa la ricerca al suo interno.</li>
+<li>Campo elementi datanti: Campo aperto per la segnalazione di eventuali materiali datanti. Non è permessa la ricerca al suo interno. ATTENZIONE: NON SI SOSTITUISCE ALLA SCHEDATURA DEI REPERTI CHE VA FATTA IN INVENTARIO MATERIALI.</li>
+</ul>
+</div></blockquote>
+<p>USM</p>
+<p>Sezione dedicata alla descrizione di una Unità Stratigrafica Muraria.</p>
+<p>Dati di scavo, Periodizzazione, Rapporti stratigrafici, Struttura</p>
+<img alt="./_images/img_323c.PNG" src="./_images/img_323c.PNG" />
+<p>Sezione per l&#8217;inserimento della Periodizzazione iniziale e finale, attività e sigla della struttura di appartenenza. Qui vengono anche inseriti altri dati come l&#8217;anno di scavo e il metodo di scavo utilizzato. Infine, con un formato totalmente innovativo, vengono segnalati i singoli rapporti stratigrafici, presentati in forma di tabella, dove ogni singola riga rappresenta un rapporto stratigrafico. NB: 1 RAPPORTO STRATIGRAFICO 1 RIGA NEL CAMPO.</p>
 <p>Il periodo e la fase sono divisi in periodo/fase iniziale e finale; se uno strato si genera e finisce la sua funzione all&#8217;interno di un periodo, solo la periodizzazione iniziale sarà compilata. Nel caso lo strato rimanga in vita per più fasi, avremo anche una periodizzazione finale. Uno script apposito prende dalla scheda di Periodizzazione i singoli codici e genera una stringa alfanumerica che può essere interrogata da pyArchInit per generare in automatico le piante di fase. L&#8217;US dell&#8217;esempio rimane in vita per tre fasi, dalla 3-3 alla 3-1, quindi riceverà 3 codici di periodo, come sotto è possibile vedere: 5/6/7.
 Per le modalità di generazione del codice di periodo vedere la sezione Tools della scheda US.</p>
 <blockquote>
-<div>Dati fisici e dati schedatura</div></blockquote>
+<div><blockquote>
+<div><ul class="simple">
+<li>Campo periodo iniziale: campo aperto per la segnalazione in numero arabo del periodo iniziale.</li>
+<li>Campo fase iniziale: campo aperto per la segnalazione in numero arabo della fase iniziale.</li>
+<li>Campo periodo finale: campo aperto per la segnalazione in numero arabo del periodo finale.</li>
+<li>Campo fase finale: campo aperto per la segnalazione in numero arabo della fase finale.</li>
+<li>Campo attività: campo aperto per la segnalazione dell&#8217;attività.</li>
+<li>Campo struttura: campo aperto per la segnalazione della struttura. ATTENZIONE: il campo dovrà essere modificato perchè dovrà poter accogliere in una lista a tendina sia la sigla di una struttura preventivamente schedata nella scheda di Struttura e per poter segnalare più Strutture a cui essa appartiene. Al momento è possibile ricorrere a &#8220;/&#8221; per suddividere le sigle di Struttura ed eseguire in pyarchinit_us_view e pyarchinit_quote_view una ricerca di tipo like per poter andare a sfruttare la ricerca della presenza di una sigla tra &#8220;/&#8221;.</li>
+<li>Campo scavato: Lista si/no per segnalare se l&#8217;US è stato totalmente scavata.</li>
+<li>Campo anno: campo aperto per segnalare l&#8217;anno di indagine dell&#8217;US.</li>
+<li>Campo rapporti stratigrafici: campo multiplo in cui è necessario specificare i singoli rapporti stratigrafici (vedi sopra).</li>
+</ul>
+<p>!!!ATTENZIONE!!! IL CAMPO RAPPORTI STRATIGRAFICI E&#8217; DIRETTAMENTE CONNESSO CON IL SISTEMA DI REALIZZAZIONE DEL MATRIX E DELL&#8217;ORDINE DEI LAYER. NON ESSENDO UNA TABELLA RELAZIONALE, QUALORA SI DECIDA DI RENDERLA UNA TABELLA SEPARATA, ANDRA&#8217; MODIFICATO TUTTO IL CODICE PRESENTE NELLE VARIE SEZIONI MATRIX E ORDINE DEI LAYER.</p>
+</div></blockquote>
+<p>Dati fisici e dati schedatura</p>
+</div></blockquote>
 <p>Sezione per l&#8217;inserimento dei dati fisici dell&#8217;Unità Stratigrafica quali: formazione, colore, consistenza, stato di conservazione, inclusi e campionature. Sotto viene segnalato lo schedatore e la data di redazione della scheda.</p>
-<p>Documentazione
-In questa apposita sezione è possibile segnalare i singoli tipi di documentazione prodotti: piante, sezioni, fotografie, diapositive, ecc..</p>
+<p>Documentazione</p>
+<img alt="./_images/img_323e.PNG" src="./_images/img_323e.PNG" />
+<p>In questa apposita sezione è possibile segnalare i singoli tipi di documentazione prodotti: piante, sezioni, fotografie, diapositive, ecc.</p>
+<p>!!!ATTENZIONE!!!
+Al momento si tratta di un sistema work in progress. Lo scopo sarebbe quello di assegnare 1 riga del campo per ogni singola tipologia di documentazione prodotta e schedata nella scheda di Documentazione (realizzata da Simone Berto). Quindi ogni riga corrisponde ad una sola pianta oppure un prospetto oppure una sezione e così via, segnalando il tipo di documentazione e il numero di riferimento che costituiscono gli ID della scheda di Documentazione. Al momento il sistema risulta incompleto. NON E&#8217; POSSIBILE FARE RICERCHE AL SUO INTERNO.
+.</p>
 </div>
 <div class="section" id="funzioni-della-scheda-us">
 <h3>3.2.3.1 Funzioni della scheda US<a class="headerlink" href="#funzioni-della-scheda-us" title="Permalink to this headline">¶</a></h3>
@@ -511,7 +560,7 @@ Infine caricare il layer pyarchinit_us_view, aprire lo stile us_caratterizzazion
 <li><a class="reference internal" href="#introduzione-alle-schede">3.2 Introduzione alle schede</a><ul>
 <li><a class="reference internal" href="#dbms-toolbar">3.2.1 DBMS Toolbar</a></li>
 <li><a class="reference internal" href="#scheda-sito">3.2.2 Scheda Sito</a></li>
-<li><a class="reference internal" href="#scheda-us">3.2.3 Scheda US</a></li>
+<li><a class="reference internal" href="#scheda-us-usm">3.2.3 Scheda US/USM</a></li>
 <li><a class="reference internal" href="#funzioni-della-scheda-us">3.2.3.1 Funzioni della scheda US</a></li>
 <li><a class="reference internal" href="#scheda-periodizzazione">3.2.4 Scheda Periodizzazione</a></li>
 <li><a class="reference internal" href="#scheda-struttura">3.2.5 Scheda Struttura</a></li>
