@@ -322,15 +322,15 @@ Al momento si tratta di un sistema work in progress. Lo scopo sarebbe quello di 
 <tbody valign="top">
 <tr class="row-even"><td>2</td>
 <td>&nbsp;</td>
-<td>1                2</td>
+<td>1               2</td>
 </tr>
 <tr class="row-odd"><td>2</td>
 <td>&nbsp;</td>
-<td>2                3</td>
+<td>2               3</td>
 </tr>
 <tr class="row-even"><td>2</td>
 <td>&nbsp;</td>
-<td>3                4</td>
+<td>3               4</td>
 </tr>
 </tbody>
 </table>
@@ -351,27 +351,60 @@ periodi precedenti;
 <ul class="simple">
 <li>Creazione dell&#8217;indice di ordine di successione stratigrafica</li>
 </ul>
-<p>L&#8217;indice di successione stratigrafica è stato ideato per poter ovviare alla visualizzazione del GIS, che sovrappone i poligoni in base al loro ordine di immissione all&#8217;interno del database. Viene generato in automatico cliccando nella sezione Tools sul pulsante “Ordine Stratigrafico”:</p>
-<p>È stato realizzato un algoritmo (al momento altamente in via di sviluppo) che crea un ordine di successione stratigrafica basato sui rapporti stratigrafici. Ogni US assume un valore univoco in base alla sua posizione nella stratigrafia e dai rapporti che ha con altre US.
+<p>L&#8217;indice di successione stratigrafica è stato ideato per poter ovviare alla visualizzazione del GIS, che sovrappone i poligoni in base al loro ordine di immissione all&#8217;interno del database.</p>
+<p>L&#8217;algoritmo realizzato (al momento altamente in via di sviluppo) crea un ordine di successione stratigrafica basato sui rapporti stratigrafici. Ogni US assume un valore univoco in base alla sua posizione nella stratigrafia e dai rapporti che ha con altre US.
 Per esempio, se 1 copre 2, 2 copre 3 e 4, ma 3 e 4 non hanno rapporti tra di loro lo script genererà i seguenti valori:</p>
-<p>US
-Rapporto
-Ordine di successione stratigrafica
-1
-Copre 2
-0
-2
-Copre 3 e 4
-1
-3
-Coperto da 2
-2
-4
-Coperto da 2
-3</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="6%" />
+<col width="26%" />
+<col width="68%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">US</th>
+<th class="head">Rapporto</th>
+<th class="head">Ordine di successione stratigrafica</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>Copre 2</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>2   Copre 3 e 4    1
+=== ============== ====================================
+3   Coperto da 2   2
+=== ============== ====================================
+4   Coperto da 2   3
+=== ============== ====================================</p>
 <p>Questo permetterà alla View SQL di visualizzare su base GIS le geometrie degli strati nel loro ordine stratigrafico originario, senza doversi preoccupare delle modalità di disegno delle US.</p>
-<p>Il layer di inserimento delle Unità Stratigrafiche (pyunitastrigrafiche) alla fine della digitalizzazione di tutte le US relative ad una fornace
-Il layer di visualizzazione delle Unità Stratigrafiche (pyarchinit_us_view) dopo la generazione dell&#8217;ordine stratigrafico</p>
+<p>Il sistema funziona per singola Area di scavo. Quindi è necessario prima di tutto eseguire una ricerca che richiamo solo un&#8217;area di scavo di un sito. Dopo aver cliccato su nuova ricerca, basta inserire nome del sito e numero di Area.</p>
+<img alt="_images/img_3231s.PNG" src="_images/img_3231s.PNG" />
+<p>A questo punto sarà necessario nella sezione Tools cliccare su “Ordine Stratigrafico”.</p>
+<img alt="_images/img_3231t.PNG" src="_images/img_3231t.PNG" />
+<p>NOTA BENE: Il sistema funziona solo se due condizioni sono verificate
+* Assenza di errori nell&#8217;inserimento dei rapporti stratigrafici
+* Accordo con il valore di loop che esegue il software in fase di analisi dell stratigrafia. Questo è un parametro tecnico ed è settato a livello di codice su 500 Loop; questo implica che una singola US, per ogni singolo rapporto, viene scansionata 500 Volte. Se una US ha più di 500 rapporti, è possibile che il sistema non riesca a completare il ciclo. Al momento è stata testata su scavi aperti di estensione sotto gli 800 mq e in contesti urbani complessi e il sistema ha sempre funzionato. Se si riscontrassero problema, ovvero il sistema non esce dal loop, è necessario modificare il parametro nel codice in python. Dato che dai loop dipende anche la velocità di esecuzione, in futuro si potrebbe aggiungere una casella dove si setta manualmente il numero di loop massimo per singola US. Va considerato che per un pacchetto di circa 40 US in ambito urbano, il sistema richiede circa un minuto di lavoro, che aumenta progressivamente all&#8217;aumentare delle US e dei rapporti inseriti.</p>
+<p>Il sistema manda invia all&#8217;utente una serie di messaggi (utilizzati per il debug del sistema), tra cui la richiesta di eseguire il matrix per verificare eventuali paradossi nella stratigrafia come US più antiche che coprono US più recenti.</p>
+<img alt="_images/img_3231t1.PNG" src="_images/img_3231t1.PNG" />
+<img alt="_images/img_3231t2.PNG" src="_images/img_3231t2.PNG" />
+<p>Lanciando il matrix sarà possibile verificare la correttezza dei rapporti tramite l&#8217;immagine esportata nella cartella pyarchinit_Matrix_folder che si trova sotto al vostro Utente, e richiamare dal Matrix interattivo le US cliccando sul singolo numero, per poter verificare sovrapposizioni corrette, a quale US si fa riferimento, ecc..</p>
+<img alt="_images/img_3231t3.PNG" src="_images/img_3231t3.PNG" />
+<img alt="_images/img_3231t4.PNG" src="_images/img_3231t4.PNG" />
+<p>Al messaggio &#8220;Inizio Sistema order layer&#8221; dare OK; &#8220;Uscita dal sistema order layer&#8221;, dare OK ed attendere, senza impegnare il PC in altre operazioni. A volte possono servire anche 15 minuti per grandi scavi ( ma ne vale la pena!!!).</p>
+<p>E&#8217; necessario attendere il messaggio &#8220;SISEMA DI ORDINAMENTO TERMINATO&#8221;.</p>
+<img alt="_images/img_3231t5.PNG" src="_images/img_3231t5.PNG" />
+<p>ATTENZIONE!!! Per motivi prettamente informatici, il sistema ricarica tutte le US del Database. Richiamate il vostro set di dati.</p>
+<p>Se qualcosa fosse andato storto e per essere sicuri che il vostro scavo sia documentato in maniera corretta, è possibile verificare una serie di report che vengono estratti dal sistema di ordinamento. Si trovano all&#8217;interno di pyArchinIt Report_Folder sotto al vostro Utente.</p>
+<img alt="_images/img_3231t5a.PNG" src="_images/img_3231t5a.PNG" />
+<p>Ecco come appare il layer di inserimento delle Unità Stratigrafiche (pyunitastrigrafiche) alla fine della digitalizzazione di tutte le US.</p>
+<img alt="_images/img_3231t6.PNG" src="_images/img_3231t6.PNG" />
+<p>Ecco Il layer di visualizzazione delle Unità Stratigrafiche (pyarchinit_us_view) dopo la generazione dell&#8217;ordine stratigrafico pronto per essere esportato.</p>
+<img alt="_images/img_3231t7.PNG" src="_images/img_3231t7.PNG" />
+<p>PROBLEMI NOTI: se si lancia il comando e sono presenti paradossi è possibile che il sistema non riuscendo a risolverli vada avanti all&#8217;infito. Oppure se si lancia il sistema su più Aree di uno scavo o su più scavi, il sistema va in loop e non c&#8217;è modo di abortire il processo. In tutti questi casi è necessario forzare l&#8217;arresto di Qgis.</p>
+<p>Revisionato fino a qui 3/1/2017</p>
 <ul class="simple">
 <li>Controllo automatico dei rapporti stratigrafici</li>
 </ul>
