@@ -91,8 +91,12 @@ Per eliminare il record corrente cliccare sul pulsante con foglio bianco barrato
 
 Tramite il pulsante con la lente di ingrandimento e "new" è possibile mettere la scheda in modalità di ricerca, e dopo aver inserito i parametri, lanciare la ricerca dal pulsante successivo con lente di ingrandimento e "search".  La lente di ingrandimento singola serve a visualizzare tutti i record presenti in una tabella.
 
-Il pulsate con scheda bianca apre una finestra di dialogo per impostare l’ordinamento dei dati. 
-.. image:: ./_images/img_321a.png
+Il pulsate con scheda bianca apre una finestra di dialogo per impostare l’ordinamento dei dati.
+
+
+.. image:: ./_images/img_321a.PNG
+
+
 Nella parte sinistra sono presenti i criteri di ordinamento. Selezionandone uno è possibile, con le frecce posizionate al centro, spostarli nella parte destra per utilizzarli come criteri di ordinamento scegliendo un ordine ascendente o discendente. Cliccando su Ordina, sarà possibile visualizzare la nostra istanza di database secondo i criteri scelti.
 
 !!!ATTENZIONE!!! SE NON SI IMPOSTA ALMENO UN TIPO DI ORDINAMENTO E SI ESCE LA SCHEDA DA UN ERRORE CHE SI PUO' IGNORARE.
@@ -103,7 +107,9 @@ Nella parte destra è possibile controllare lo stato del database: in uso, in mo
 ---------------------
 Alla scheda di sito si accede tramite il pulsante della Toolbar di pyArchInit:
 
-.. image:: ./_images/img_322button.png
+
+.. image:: ./_images/img_322button.PNG
+
 
 La scheda di sito serve ad impostare il nome del luogo o del progetto in cui si verifica un'indagine. Al momento si tratta di una scheda aperta composta essenzialmente da 7 campi:
 
