@@ -74,6 +74,7 @@ I tools per la gestione e controllo dei dati:
 ---------------------------------
 Breve introduzione valida per tutte le schede.
 
+
 .. image:: ./_images/img_321.png
 
 
