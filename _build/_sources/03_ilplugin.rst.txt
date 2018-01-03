@@ -75,7 +75,7 @@ I tools per la gestione e controllo dei dati:
 Breve introduzione valida per tutte le schede.
 
 
-.. image:: ./_images/img_321.png
+.. image:: ./_images/img_321.PNG
 
 
 La parte alta di tutte le schede è dedicata alla pulsantiera per navigare tra i records del database: a sinistra è presente la pulsantiera per andare avanti e indietro tra i records, aggiungere una nuova scheda, salvare il record, eliminare, ricercare, ordinare e mostrare tutti i records, oltre ad un pulsante di “emergenza” per ricaricare il database.

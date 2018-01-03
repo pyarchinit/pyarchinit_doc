@@ -75,7 +75,7 @@ I tools per la gestione e controllo dei dati:
 Breve introduzione valida per tutte le schede.
 
 
-.. image:: ./_images/img_321.png
+.. image:: ./_images/img_321.PNG
 
 
 La parte alta di tutte le schede è dedicata alla pulsantiera per navigare tra i records del database: a sinistra è presente la pulsantiera per andare avanti e indietro tra i records, aggiungere una nuova scheda, salvare il record, eliminare, ricercare, ordinare e mostrare tutti i records, oltre ad un pulsante di “emergenza” per ricaricare il database.
@@ -246,6 +246,7 @@ Al momento si tratta di un sistema work in progress. Lo scopo sarebbe quello di 
 ---------------------------------
 
 La scheda US possiede una serie di funzioni che vanno ad automatizzare alcune delle operazioni che si compiono nel corso della catastazione ed elaborazione dei dati archeologici al fine di aumentare il controllo sull'integrità del dato e la validità dell'output. Al momento per la scheda US sono disponibili le seguenti funzioni:
+
 *sistema di generazione di piante composite a partire dalle query della scheda US;
 *apertura delle schede US da selezione su base GIS;
 *visualizzazione su GIS della planimetria dell'US del record corrente;
