@@ -83,18 +83,18 @@ La parte alta di tutte le schede è dedicata alla pulsantiera per navigare tra i
 I primi 4 pulsanti, guardandoli da sinistra verso destra, caratterizzati da una freccia verde, permettono di andare al primo record o indietro di 1 record, di navigare al record successivo o visualizzare l’ultimo.
 NB: NELLA CASELLA REC STEP è possibile decidere di quanti record avanzare o tornare indietro usando le frecce singole. FUNZIONE DISPOBILE AL MOMENTO SOLO PER LA SCHEDA US.
 
-Il pulsante con la scheda bianca e una piccola penna sopra serve a mettere l’interfaccia in modalità “nuovo record”. 
+Il pulsante con la scheda bianca e una piccola penna sopra serve a mettere l’interfaccia in modalità nuovo record. 
 
 Per salvare la creazione di un nuovo o una modifica apportata ad un record esistente cliccare sull’icona col dischetto. 
 
 Per eliminare il record corrente cliccare sul pulsante con foglio bianco barrato da una X rossa. 
 
-Tramite il pulsante con la lente di ingrandimento e "new" è possibile mettere la scheda in modalità di ricerca, e dopo aver inserito i parametri, lanciare la ricerca dal pulsante successivo con lente di ingrandimento e "search".  La lente di ingrandimento singola serve a visualizzare tutti i record presenti in una tabella.
+Tramite il pulsante con la lente di ingrandimento e new è possibile mettere la scheda in modalità di ricerca, e dopo aver inserito i parametri, lanciare la ricerca dal pulsante successivo con lente di ingrandimento e search.  La lente di ingrandimento singola serve a visualizzare tutti i record presenti in una tabella.
 
 Il pulsate con scheda bianca apre una finestra di dialogo per impostare l’ordinamento dei dati.
 
 
-.. image:: ./_images/img_321a.PNG
+.. image:: ./_images/img_321a.png
 
 
 Nella parte sinistra sono presenti i criteri di ordinamento. Selezionandone uno è possibile, con le frecce posizionate al centro, spostarli nella parte destra per utilizzarli come criteri di ordinamento scegliendo un ordine ascendente o discendente. Cliccando su Ordina, sarà possibile visualizzare la nostra istanza di database secondo i criteri scelti.
