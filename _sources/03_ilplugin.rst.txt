@@ -1,4 +1,4 @@
-3. Il plugin pyArchInit
+﻿3. Il plugin pyArchInit
 ****************************************
 
 Piccola premessa
@@ -45,7 +45,7 @@ Le tabelle per il data entry sono:
 Scheda Sito
 Scheda Periodizzazione
 Scheda Struttura
-Scheda US
+Scheda US/USM
 Scheda Inventario Reperti
 Scheda Campioni
 Scheda Tafonomica
@@ -75,7 +75,7 @@ Sistema di caricamento e backup del database
 
 La parte alta di tutte le schede è dedicata alla pulsantiera per navigare tra i records del database: a sinistra è presente la pulsantiera per andare avanti e indietro tra i records, aggiungere una nuova scheda, salvare il record, eliminare, ricercare, ordinare e mostrare tutti i records, oltre ad un pulsante di “emergenza” per ricaricare il database.
 I primi 4 pulsanti, guardandoli da sinistra verso destra, caratterizzati da una freccia, permettono di andare al primo record (1) o indietro di 1 record (2), di navigare al record successivo (3) o visualizzare l’ultimo (4).
-Il pulsante con la scheda bianca e una pennina sopra (5) serve  a mettere l’interfaccia in modalità “nuovo record”. Per salvare la creazione di un nuovo o una modifica apportata ad un record esistente cliccare sull’icona col dischetto (6). Per eliminare il record corrente cliccare sul pulsante con foglio bianco barrato da una X rossa (7). Tramite i pulsanti con la lente di ingrandimento è possibile mettere la scheda in modalità di ricerca (8), lanciare la ricerca (9) oppure visualizzare tutti i record presenti in una tabella (11).
+Il pulsante con la scheda bianca e una piccola penna sopra (5) serve  a mettere l’interfaccia in modalità “nuovo record”. Per salvare la creazione di un nuovo o una modifica apportata ad un record esistente cliccare sull’icona col dischetto (6). Per eliminare il record corrente cliccare sul pulsante con foglio bianco barrato da una X rossa (7). Tramite i pulsanti con la lente di ingrandimento è possibile mettere la scheda in modalità di ricerca (8), lanciare la ricerca (9) oppure visualizzare tutti i record presenti in una tabella (11).
 Il pulsate con scheda bianca (10) apre una finestra di dialogo per impostare l’ordinamento dei dati. Nella parte sinistra sono presenti i criteri di ordinamento. Selezionandone uno è possibile, con le frecce posizionate al centro, spostarli nella parte destra per utilizzarli come criteri di ordinamento scegliendo un ordine ascendente o discendente. Cliccando su Ordina, sarà possibile visualizzare la nostra istanza di database secondo i criteri scelti.
 
 Immagine qui

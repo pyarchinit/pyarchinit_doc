@@ -42,46 +42,61 @@ serie di tools per le chiamate dinamiche in tempo reale dei dati e l'elaborazion
 
 Le tabelle per il data entry sono:
 
-Scheda Sito
-Scheda Periodizzazione
-Scheda Struttura
-Scheda US
-Scheda Inventario Reperti
-Scheda Campioni
-Scheda Tafonomica
-Scheda Individuo
-Scheda Determinazione del sesso
-Scheda Determinazione dell'età
-Scheda Reperti archeozoologici
-Scheda di Unità Topografica
-Scheda di Catalogazione dei media
-Scheda di gestione della documentazione
-Scheda di gestione dei thesaurus
+	*Scheda Sito
+	*Scheda Periodizzazione
+	*Scheda Struttura
+	*Scheda US
+	*Scheda Inventario Reperti
+	*Scheda Campioni
+	*Scheda Tafonomica
+	*Scheda Individuo
+	*Scheda Determinazione del sesso
+	*Scheda Determinazione dell'età
+	*Scheda Reperti archeozoologici
+	*Scheda di Unità Topografica
+	*Scheda di Catalogazione dei media
+	*Scheda di gestione della documentazione
+	*Scheda di gestione dei thesaurus
 
 
 I tools per la gestione e controllo dei dati:
 
-Sistema di controllo del tempo
-Sistema di esportazione delle directory per i media
-Sistema centralizzato di esportazione PDF
-Sistema di ricerca immagini simili
-Configurazione del database
-Info sul plugin
-Sistema di caricamento e backup del database
+	*Sistema di controllo del tempo
+	*Sistema di esportazione delle directory per i media
+	*Sistema centralizzato di esportazione PDF
+	*Sistema di ricerca immagini simili
+	*Configurazione del database
+	*Info sul plugin
+	*Sistema di caricamento e backup del database
 
 
-3.2.1 DBMS Toolbar
+3.2.1 Toolbar singole schede
 ---------------------------------
+Breve introduzione valida per tutte le schede.
+
+.. image:: ./_images/img_321.PNG
+
 
 La parte alta di tutte le schede è dedicata alla pulsantiera per navigare tra i records del database: a sinistra è presente la pulsantiera per andare avanti e indietro tra i records, aggiungere una nuova scheda, salvare il record, eliminare, ricercare, ordinare e mostrare tutti i records, oltre ad un pulsante di “emergenza” per ricaricare il database.
-I primi 4 pulsanti, guardandoli da sinistra verso destra, caratterizzati da una freccia, permettono di andare al primo record (1) o indietro di 1 record (2), di navigare al record successivo (3) o visualizzare l’ultimo (4).
-Il pulsante con la scheda bianca e una pennina sopra (5) serve  a mettere l’interfaccia in modalità “nuovo record”. Per salvare la creazione di un nuovo o una modifica apportata ad un record esistente cliccare sull’icona col dischetto (6). Per eliminare il record corrente cliccare sul pulsante con foglio bianco barrato da una X rossa (7). Tramite i pulsanti con la lente di ingrandimento è possibile mettere la scheda in modalità di ricerca (8), lanciare la ricerca (9) oppure visualizzare tutti i record presenti in una tabella (11).
-Il pulsate con scheda bianca (10) apre una finestra di dialogo per impostare l’ordinamento dei dati. Nella parte sinistra sono presenti i criteri di ordinamento. Selezionandone uno è possibile, con le frecce posizionate al centro, spostarli nella parte destra per utilizzarli come criteri di ordinamento scegliendo un ordine ascendente o discendente. Cliccando su Ordina, sarà possibile visualizzare la nostra istanza di database secondo i criteri scelti.
 
-Immagine qui
+I primi 4 pulsanti, guardandoli da sinistra verso destra, caratterizzati da una freccia verde, permettono di andare al primo record o indietro di 1 record, di navigare al record successivo o visualizzare l’ultimo.
+NB: NELLA CASELLA REC STEP è possibile decidere di quanti record avanzare o tornare indietro usando le frecce singole. FUNZIONE DISPOBILE AL MOMENTO SOLO PER LA SCHEDA US.
 
+Il pulsante con la scheda bianca e una piccola penna sopra serve a mettere l’interfaccia in modalità “nuovo record”. 
 
-Nella parte destra è possibile controllare lo stato del database: in uso, in modalità ricerca o inserimento di un nuovo record (13). Viene segnalato se il set di records ricercati è ordinato o meno (14), il numero del record corrente (15) e il numero di records totali consultabili (14). Il numero di record totali si riferisce alla cosiddetta “istanza di database”, ovvero non necessariamente a tutti i record presenti nella tabella, ma al complesso di record richiamati dal database, che può ovviamente variare da uno a molti oppure tutti, a seconda della ricerca impostata. La modalità “usa” si riferisce al momento in cui è possibile consultare oppure modificare i record. L’ordinamento ci informerà se l’istanza di database è stata ordinata in base ad un criterio, mentre il numero del record, corrisponde alla posizione del record visualizzato in base all’istanza di database e al criterio di ordinamento scelto.
+Per salvare la creazione di un nuovo o una modifica apportata ad un record esistente cliccare sull’icona col dischetto. 
+
+Per eliminare il record corrente cliccare sul pulsante con foglio bianco barrato da una X rossa. 
+
+Tramite il pulsante con la lente di ingrandimento e "new" è possibile mettere la scheda in modalità di ricerca, e dopo aver inserito i parametri, lanciare la ricerca dal pulsante successivo con lente di ingrandimento e "search".  La lente di ingrandimento singola serve a visualizzare tutti i record presenti in una tabella.
+
+Il pulsate con scheda bianca apre una finestra di dialogo per impostare l’ordinamento dei dati. 
+.. image:: ./_images/img_321a.PNG
+Nella parte sinistra sono presenti i criteri di ordinamento. Selezionandone uno è possibile, con le frecce posizionate al centro, spostarli nella parte destra per utilizzarli come criteri di ordinamento scegliendo un ordine ascendente o discendente. Cliccando su Ordina, sarà possibile visualizzare la nostra istanza di database secondo i criteri scelti.
+
+!!!ATTENZIONE!!! SE NON SI IMPOSTA ALMENO UN TIPO DI ORDINAMENTO E SI ESCE LA SCHEDA DA UN ERRORE CHE SI PUO' IGNORARE.
+
+Nella parte destra è possibile controllare lo stato del database: in uso, in modalità ricerca o inserimento di un nuovo record . Viene segnalato se il set di records ricercati è ordinato o meno, il numero del record corrente e il numero di records totali consultabili. Il numero di record totali si riferisce alla cosiddetta “istanza di database”, ovvero non necessariamente a tutti i record presenti nella tabella, ma al complesso di record richiamati dal database, che può ovviamente variare da uno a molti oppure tutti, a seconda della ricerca impostata. La modalità “usa” si riferisce al momento in cui è possibile consultare oppure modificare i record. L’ordinamento ci informerà se l’istanza di database è stata ordinata in base ad un criterio, mentre il numero del record, corrisponde alla posizione del record visualizzato in base all’istanza di database e al criterio di ordinamento scelto.
 
 3.2.2 Scheda Sito
 ---------------------
@@ -209,7 +224,7 @@ Per le modalità di generazione del codice di periodo vedere la sezione Tools de
 	!!!ATTENZIONE!!! IL CAMPO RAPPORTI STRATIGRAFICI E' DIRETTAMENTE CONNESSO CON IL SISTEMA DI REALIZZAZIONE DEL MATRIX E DELL'ORDINE DEI LAYER. NON ESSENDO UNA TABELLA RELAZIONALE, QUALORA SI DECIDA DI RENDERLA UNA TABELLA SEPARATA, ANDRA' MODIFICATO TUTTO IL CODICE PRESENTE NELLE VARIE SEZIONI MATRIX E ORDINE DEI LAYER.
 
 
-Dati fisici e dati schedatura
+Dati fisici e dati schedatura
 
 
 Sezione per l'inserimento dei dati fisici dell'Unità Stratigrafica quali: formazione, colore, consistenza, stato di conservazione, inclusi e campionature. Sotto viene segnalato lo schedatore e la data di redazione della scheda.
@@ -236,73 +251,110 @@ In questa apposita sezione è possibile segnalare i singoli tipi di documentazio
 
 !!!ATTENZIONE!!!
 Al momento si tratta di un sistema work in progress. Lo scopo sarebbe quello di assegnare 1 riga del campo per ogni singola tipologia di documentazione prodotta e schedata nella scheda di Documentazione (realizzata da Simone Berto). Quindi ogni riga corrisponde ad una sola pianta oppure un prospetto oppure una sezione e così via, segnalando il tipo di documentazione e il numero di riferimento che costituiscono gli ID della scheda di Documentazione. Al momento il sistema risulta incompleto. NON E' POSSIBILE FARE RICERCHE AL SUO INTERNO.
-.
-
+
+
 3.2.3.1 Funzioni della scheda US
 ---------------------------------
 
 La scheda US possiede una serie di funzioni che vanno ad automatizzare alcune delle operazioni che si compiono nel corso della catastazione ed elaborazione dei dati archeologici al fine di aumentare il controllo sull'integrità del dato e la validità dell'output. Al momento per la scheda US sono disponibili le seguenti funzioni:
-sistema di generazione di piante composite a partire dalle query della scheda US;
-apertura delle schede US da selezione su base GIS;
-visualizzazione su GIS della planimetria dell'US del record corrente;
-visualizzazione della pianta all'interno della scheda US;
-creazione in automatico del codice di periodizzazione dell'US;
-creazione dell'indice di ordine di successione stratigrafica;
-controllo automatico dei rapporti stratigrafici;
-esportazione del matrix;
-esportazione schede e indice delle US in formato PDF.
+*sistema di generazione di piante composite a partire dalle query della scheda US;
+*apertura delle schede US da selezione su base GIS;
+*visualizzazione su GIS della planimetria dell'US del record corrente;
+*visualizzazione della pianta all'interno della scheda US;
+*creazione in automatico del codice di periodizzazione dell'US;
+*creazione dell'indice di ordine di successione stratigrafica;
+*controllo automatico dei rapporti stratigrafici;
+*esportazione del matrix;
+*esportazione schede e indice delle US in formato PDF.
 
 - Sistema di generazione di piante composite a partire dalle query della scheda US
 1. Andate nella sezione Tools della scheda US e cliccare sul pulsante “Visualizzazione GIS”; apparirà un messaggio che vi informa che le vostre ricerche saranno trasformate in piante di scavo.
 
+.. image:: ./_images/img_3231a.PNG
+
 2. Dopo aver cliccato su “New Search” impostate una ricerca (in questo caso cerchiamo la struttura TB01 – una tomba, di uno scavo di Ravenna).
+
+.. image:: ./_images/img_3231b.PNG
 
 3. Lanciate la ricerca cliccando su “Search!!!”.
 
+.. image:: ./_images/img_3231c.PNG
+
 4. Sul GIS vengono caricate le US corrispondenti alla ricerca, caratterizzate in base agli stili pre-impostati di Qgis (vedi capitolo sugli stili); nella scheda US invece sono disponibili i singoli record.
+
+.. image:: ./_images/img_3231d.PNG
 
 - Apertura delle schede US da selezione su base GIS
 Sul livello pyarchinit_US_view eseguire una selezione nella porzione di scavo che desiderate.
 
+.. image:: ./_images/img_3231f.PNG
+
 Oppure, aprite la tabella del livello e utilizzate il query builder di Qgis per realizzare la ricerca che desiderate: in questo caso abbiamo selezionato uno scavo archeologico e tutte le US che per definizione stratigrafica riportano la dicitura: “struttura in muratura”.
+
+.. image:: ./_images/img_3231g.PNG
+
+.. image:: ./_images/img_3231h.PNG
+
+.. image:: ./_images/img_3231i.PNG
 
 Aprite la scheda US di pyArchInit e andate alla sezione Tools. A questo punto cliccate sul pulsante “Show selected Features”. La scheda aprirà i records corrispondenti alla selezione.
 
+.. image:: ./_images/img_3231l.PNG
+
+.. image:: ./_images/img_3231m.PNG
+
 - Visualizzazione su base GIS dell'US corrente
-Quando ci si è posizionati sull'US che si desidera visualizzare, andare nella sezione tools e cliccare sul pulsante “Visualizza US”.
+Quando ci si è posizionati sull'US che si desidera visualizzare, andare nella sezione tools e cliccare sul pulsante "Disegna US”.
+
+.. image:: ./_images/img_3231n.PNG
+
+.. image:: ./_images/img_3231na.PNG
 
 In Qgis verrà disegnata l'US corrispondente.
 
+.. image:: ./_images/img_3231o.PNG
+
+
+!!! ATTENZIONE !!! AL MOMENTO QUESTO SISTEMA NON FUNZIONA PIU' PER MODIFICA DELLE API DI QGIS!!!
 - Visualizzazione della pianta all'interno della scheda US
 È possibile visualizzare la pianta di una US andando nella sezione Tools e cliccando sul pulsante “Preview pianta US” apparirà un messaggio che vi avvertirà che ogni US consultata sarà caricata nell'apposita sezione.
+
 
 Andando nella sezione “Piante” della scheda US sarà possibile visualizzare la pianta dell'US, con le caratterizzazioni e le quote. Posizionandosi sulla pianta è possibile zoomare con la rotella del mouse e selezionando lo strumento di spostamento (icona con la manina) è possibile navigare in ogni direzione.
 
 
 - Creazione in automatico del codice di periodizzazione dell'US
-Dalla scheda US è possibile andare a creare il codice di periodizzazione dell'US. Come è possibile leggere nel capitolo inerente la scheda di Periodizzazione e nella parte della scheda US riguardante la periodizzazione, una volta assegnato un periodo/fase iniziale all'US e un eventuale periodo finale, basta cliccare nella sezione Tools il pulsante “Crea codice Periodo”.
 
-Sarà assegnato il valore del codice periodo dalla periodizzazione finale all'iniziale, divisi da uno slash per motivi prettamente informatici. Se uno strato vive dal periodo 1.1 fino al 2.1, il codice di periodizzazione sarà: 1/2/3
+Dalla scheda US è possibile creare il codice di periodizzazione dell'US. 
 
-Periodo
- Fase
-Codice
-1
-1
-1
-1
-2
-2
-2
-1
-2
+Come spiegato nel capitolo inerente alla scheda di Periodizzazione e nella parte della scheda US riguardante la periodizzazione, una volta assegnato un periodo/fase iniziale all'US e un eventuale periodo finale, basta cliccare nella sezione Tools il pulsante “Crea codice Periodo”.
 
-Risultato: 1/2/3
+.. image:: ./_images/img_3231p.PNG
+.. image:: ./_images/img_3231p1.PNG
+
+Sarà assegnato il valore del codice periodo dalla periodizzazione finale all'iniziale, divisi da uno slash per motivi prettamente informatici. Se uno strato vive dal periodo 2.1 fino al 2.3, il codice di periodizzazione sarà: 2/3/4
+
+
+
+========	=====	=======
+Periodo		Fase	Codice
+========	=====	=======
+2			1		2
+2			2		3
+2			3		4
+========	=====	=======
+
+Risultato: 2/3/4
+
+.. image:: ./_images/img_3231q.PNG
+
 
 La sintassi del valore inserito nel campo, serve a pyArchInit per poter realizzare le query di
 richiamo delle piante di fase, attraverso una sintassi specifica:
 
-cont_per = '4' OR cont_per LIKE '4/%' OR cont_per LIKE '%/4' OR cont_per LIKE '%/4/%'
+cont_per = '3' OR cont_per LIKE '3/%' OR cont_per LIKE '%/3' OR cont_per LIKE '%/3/%'
+
+.. image:: ./_images/img_3231r.PNG
 
 Sul campo cont_per viene cercato il codice di periodizzazione in quattro modalità:
 
@@ -313,6 +365,7 @@ ai periodi successivi;
 periodi precedenti;
 4. cont_per LIKE '%/valore/%': trova tutte le US che afferiscono ad un periodo intermedio tra un periodo iniziale e uno finale.
 
+.. image:: ./_images/img_3231r1.PNG
 
 - Creazione dell'indice di ordine di successione stratigrafica
 L'indice di successione stratigrafica è stato ideato per poter ovviare alla visualizzazione del GIS, che sovrappone i poligoni in base al loro ordine di immissione all'interno del database. Viene generato in automatico cliccando nella sezione Tools sul pulsante “Ordine Stratigrafico”:
