@@ -756,15 +756,106 @@ Appariranno tutte le US/USM presenti in quella periodizzazione, comprese quelle 
 Un'altra modalità di creare piante composite basate sulla periodizzazione si travo nel capitolo dedicato al Time Manager.   
 
 
-
-
-
-
 3.2.5 Scheda Struttura
 --------------------------
+Col termine Struttura in pyArchInit, come per l'archeologia in generale, si possono andare a definire dei raggruppamenti di US/USM omogenei per definizione strutturale e temporale.
+
+A secondo della scala di analisi, la struttura potrebbe anche coincidere con un sito, qualora si decidesse di indagare un luogo solo in base alla sua definizione omogenea nel tempo.
+
+E' possibile anche dare una sigla di struttura ad elementi più limitati, che coinvolgono da una sola US/USM a più US/USM.
+
+Un'US/USM può appartenere anche a più Strutture, e una Struttura può essere collegata a più Strutture.
+
+ATTENZIONE: come già segnalato nella Scheda US/USM, in pyArchInit vi è una limitazione nella possibilità di associare più US/USM a più Strutture, in quanto il campo sigla struttura nella scheda US/USM, può accogliere (apparentemente) un solo valore. Se si specifica una sola struttura per singola scheda US/USM, sarà possibile visualizzare i dati, sia come schede che come geometrie, facendo una query nella Scheda US cercando una sola Struttura. Questo però implica che le US/USM per le quali è stata segnalata la medesima struttura, ma associata ad alte sigle, queste US/USM non saranno incluse nella ricerca, facendo corrispondere i dati ricavati e la pianta, alle sole US/USM che appartengono in esclusiva a quella struttura. Il problema è ovviabile sfruttando un inserimento delle sigle di Struttura in scheda US/USM aggiungendo un separatore, obbligatoriamente uno slash (/), per esempio TB01/TB02/MU03. In questo modo si potrà eseguire una query LIKE che tramite il simbolo '%', sia in grado di leggere e trovare tutte le US/USM che afferiscono a quella struttura, sia in via esclusiva che non.
+
+Alla scheda di Struttura si accede dalla toolbar di pyArchInit tramite il pulsante:
+
+.. image:: ./_images/img_325.PNG
+   :align: center
+
+La scheda presenta una serie di interfacce per specificare diversi tipi di dato.
+
+.. image:: ./_images/img_325a.PNG
+   :align: center
+
+Nella parte alta sono presenti i campi per gli identificatori univoci e per definire la struttura in base a tre parametri (ATTENZIONE!!! Il sistema di parametri in lista a tendina è aperto e non è mai stato sviluppato e normalizzato):
+
+.. image:: ./_images/img_325b.PNG
+   :align: center
+
+* Campo Sito: lista a tendina che prende i valori dal campo sito della Scheda Sito.
+* Campo Sigla struttura: lista a tendina aperta per segnalare la sigla di struttura tramite una sigla in lettere. Per una regola interna è obbligatorio utilizzare solo 2 leggere per struttura.
+ATTENZIONE: il sistema di sigle non è mai stato collegato al Thesaurus Sigle che è già predisposto per creare le sigle da utilizzare. E' necessario anche codificare le singole sigle per singole tipologie di struttura in modo da avere sigle univoche.
+* Campo Categoria: lista a tendina aperta per definire il livello di categoria a cui appartiene la struttura.
+* Campo Tipologia: lista a tendina aperta per definire il livello di tipologia a cui appartiene la struttura. 
+* Campo Definizione: lista a tendina aperta per definire il livello di tipologia a cui appartiene la struttura.
+ATTENZIONE: Il sistema di tre campi deve essere collegato al Thesaurus sigle e va codificato un sistema di catastazione delle Strutture.
+
+Dati descrittivi
+
+Sezione per l'inserimento della descrizione e interpretazione della struttura.
+
+.. image:: ./_images/img_325c.PNG
+   :align: center
+
+* Campo Descrizione: campo aperto per la descrizione della Struttura.
+* Campo Interpretazione: campo aperto per l'intepretazione della Struttura.
+
+Periodizzazione
+
+Sezione per l'inserimento della periodizzazione.
+
+.. image:: ./_images/img_325d.PNG
+   :align: center
+
+* Campo periodo iniziale: lista a tendina per la segnalazione in numero arabo del periodo iniziale. I valori sono ricavati dalla scheda di Periodo in base al valore sito.
+* Campo fase iniziale: lista a tendina per la segnalazione in numero arabo della fase iniziale. I valori sono ricavati dalla scheda di Periodo in base al valore sito.
+* Campo periodo finale: lista a tendina per la segnalazione in numero arabo del periodo finale. I valori sono ricavati dalla scheda di Periodo in base al valore sito.
+* Campo fase finale: lista a tendina per la segnalazione in numero arabo della fase finale. I valori sono ricavati dalla scheda di Periodo in base al valore sito.
+* Campo Datazione Estesa Letterale: campo aperto di tipo alfanumerico per segnalare l'intera periodizzazione in termini descrittivi.
+
+Rapporti
+
+Sezione per la segnalazione di rapporti tra Strutture del medesimo sito o di altri siti.
+
+
+.. image:: ./_images/img_325e.PNG
+   :align: center
+
+
+* Campo Rapporti struttura: campo multiplo composto da 3 colonne in cui è possibile inserire: 
+*.Tipo di rapporto (Si appoggia a, Gli si appoggia, Connesso con, Si sovrappone a, Gli si sovrappone, Ampliato da, Amplia, Uguale a);
+*.Sito: inserire il nome del sito a cui appartiene la struttura connessa (deve essere utilizzato un nome già schedato nella scheda Sito) ATTENZIONE: è necessario creare il link dinamico per avere i siti dalla scheda Sito.
+*.Sigla: colonna in cui è necessario schedare la sigla della struttura connessa. ATTENZIONE: è necessario collegare questo campo con le sigle presenti nel Thesarus Sigle.
+*.Numero: campo in cui è necessario segnalare il numero di struttura connessa.
+E' possibile segnalare illitmitati tipo di rapporto con varie strutture, anche tra siti differenti.
+ATTENZIONE: NON E' POSSIBILE ESEGUIRE RICERCHE IN QUESTO CAMPO. SAREBBE PERO' POSSIBILE CREARE UN MATRIX BASATO SU QUESTO TIPO DI RAPPORTI.
+
+Elementi costruttivi
+
+Sezione per la segnalazione dei materiali impiegati e degli elementri strutturali individuati.
+
+.. image:: ./_images/img_325f.PNG
+   :align: center
+
+* Campo Materiali impiegati: lista a tendina chiusa in cui è possibile segnalare i materiali impiegati nella struttura. ATTENZIONE: deve essere collegato al Thesaurus e non è possibile fare ricerche al suo interno. 
+
+* Campo Elementi strutturali: campo aperto che contiene 2 colonne in cui è possibile segnalare tipologia strutturale e quantità individuate. ATTENZIONE: deve essere collegato al Thesaurus e non è possibile fare ricerche al suo interno. 
+
+Misure
+
+Sezione per la segnalazione delle misure legate alla struttura:
+
+.. image:: ./_images/img_325g.PNG
+   :align: center
+
+* Campo Misurazioni: campo aperto che contiene 3 colonne in cui è possibile segnalare tipologia di misura, unità di misura e valore. ATTENZIONE: deve essere collegato al Thesaurus e non è possibile fare ricerche al suo interno. 
+
+Di seguito diamo una serie di esempi per ogni sezione della scheda.
 
 La scheda di struttura oltre ad assegnare una sigla e una definizione strutturale ad un
 raggruppamento di US, permette di andare a specificare in una serie di sezioni apposite i singoli elementi che la costituiscono.
+
 La parte alta dell'interfaccia presenta tre campi che fanno da identificatore: Sito, Sigla Struttura, Numero; la numerazione è progressiva a partire dalla coppia di valori Sito+Sigla struttura, del tipo:
 
 *Sito 1, TB1
@@ -789,6 +880,9 @@ Qui si va a segnalare periodi e fasi iniziali e finali specificati nella scheda 
 Elementi costruttivi
 È una sezione altamente sperimentale, in cui è possibile andare ad elencare i singoli materiali di cui è composta la struttura, gli elementi strutturali e tutti i tipi di misure.
 
+
+Revisionato fino a qui: 5/1/2018
+----------------------------------
 
 3.2.5 Scheda Inventario Reperti
 ----------------------------------

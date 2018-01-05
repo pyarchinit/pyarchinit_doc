@@ -613,15 +613,78 @@ basterà posizionarvi sul periodo che volete visualizzare e cliccare il pulsante
 </div>
 <div class="section" id="scheda-struttura">
 <h3>3.2.5 Scheda Struttura<a class="headerlink" href="#scheda-struttura" title="Permalink to this headline">¶</a></h3>
+<p>Col termine Struttura in pyArchInit, come per l&#8217;archeologia in generale, si possono andare a definire dei raggruppamenti di US/USM omogenei per definizione strutturale e temporale.</p>
+<p>A secondo della scala di analisi, la struttura potrebbe anche coincidere con un sito, qualora si decidesse di indagare un luogo solo in base alla sua definizione omogenea nel tempo.</p>
+<p>E&#8217; possibile anche dare una sigla di struttura ad elementi più limitati, che coinvolgono da una sola US/USM a più US/USM.</p>
+<p>Un&#8217;US/USM può appartenere anche a più Strutture, e una Struttura può essere collegata a più Strutture.</p>
+<p>ATTENZIONE: come già segnalato nella Scheda US/USM, in pyArchInit vi è una limitazione nella possibilità di associare più US/USM a più Strutture, in quanto il campo sigla struttura nella scheda US/USM, può accogliere (apparentemente) un solo valore. Se si specifica una sola struttura per singola scheda US/USM, sarà possibile visualizzare i dati, sia come schede che come geometrie, facendo una query nella Scheda US cercando una sola Struttura. Questo però implica che le US/USM per le quali è stata segnalata la medesima struttura, ma associata ad alte sigle, queste US/USM non saranno incluse nella ricerca, facendo corrispondere i dati ricavati e la pianta, alle sole US/USM che appartengono in esclusiva a quella struttura. Il problema è ovviabile sfruttando un inserimento delle sigle di Struttura in scheda US/USM aggiungendo un separatore, obbligatoriamente uno slash (/), per esempio TB01/TB02/MU03. In questo modo si potrà eseguire una query LIKE che tramite il simbolo &#8216;%&#8217;, sia in grado di leggere e trovare tutte le US/USM che afferiscono a quella struttura, sia in via esclusiva che non.</p>
+<p>Alla scheda di Struttura si accede dalla toolbar di pyArchInit tramite il pulsante:</p>
+<img alt="_images/img_325.PNG" class="align-center" src="_images/img_325.PNG" />
+<p>La scheda presenta una serie di interfacce per specificare diversi tipi di dato.</p>
+<img alt="_images/img_325a.PNG" class="align-center" src="_images/img_325a.PNG" />
+<p>Nella parte alta sono presenti i campi per gli identificatori univoci e per definire la struttura in base a tre parametri (ATTENZIONE!!! Il sistema di parametri in lista a tendina è aperto e non è mai stato sviluppato e normalizzato):</p>
+<img alt="_images/img_325b.PNG" class="align-center" src="_images/img_325b.PNG" />
+<ul class="simple">
+<li>Campo Sito: lista a tendina che prende i valori dal campo sito della Scheda Sito.</li>
+<li>Campo Sigla struttura: lista a tendina aperta per segnalare la sigla di struttura tramite una sigla in lettere. Per una regola interna è obbligatorio utilizzare solo 2 leggere per struttura.</li>
+</ul>
+<p>ATTENZIONE: il sistema di sigle non è mai stato collegato al Thesaurus Sigle che è già predisposto per creare le sigle da utilizzare. E&#8217; necessario anche codificare le singole sigle per singole tipologie di struttura in modo da avere sigle univoche.
+* Campo Categoria: lista a tendina aperta per definire il livello di categoria a cui appartiene la struttura.
+* Campo Tipologia: lista a tendina aperta per definire il livello di tipologia a cui appartiene la struttura.
+* Campo Definizione: lista a tendina aperta per definire il livello di tipologia a cui appartiene la struttura.
+ATTENZIONE: Il sistema di tre campi deve essere collegato al Thesaurus sigle e va codificato un sistema di catastazione delle Strutture.</p>
+<p>Dati descrittivi</p>
+<p>Sezione per l&#8217;inserimento della descrizione e interpretazione della struttura.</p>
+<img alt="_images/img_325c.PNG" class="align-center" src="_images/img_325c.PNG" />
+<ul class="simple">
+<li>Campo Descrizione: campo aperto per la descrizione della Struttura.</li>
+<li>Campo Interpretazione: campo aperto per l&#8217;intepretazione della Struttura.</li>
+</ul>
+<p>Periodizzazione</p>
+<p>Sezione per l&#8217;inserimento della periodizzazione.</p>
+<img alt="_images/img_325d.PNG" class="align-center" src="_images/img_325d.PNG" />
+<ul class="simple">
+<li>Campo periodo iniziale: lista a tendina per la segnalazione in numero arabo del periodo iniziale. I valori sono ricavati dalla scheda di Periodo in base al valore sito.</li>
+<li>Campo fase iniziale: lista a tendina per la segnalazione in numero arabo della fase iniziale. I valori sono ricavati dalla scheda di Periodo in base al valore sito.</li>
+<li>Campo periodo finale: lista a tendina per la segnalazione in numero arabo del periodo finale. I valori sono ricavati dalla scheda di Periodo in base al valore sito.</li>
+<li>Campo fase finale: lista a tendina per la segnalazione in numero arabo della fase finale. I valori sono ricavati dalla scheda di Periodo in base al valore sito.</li>
+<li>Campo Datazione Estesa Letterale: campo aperto di tipo alfanumerico per segnalare l&#8217;intera periodizzazione in termini descrittivi.</li>
+</ul>
+<p>Rapporti</p>
+<p>Sezione per la segnalazione di rapporti tra Strutture del medesimo sito o di altri siti.</p>
+<img alt="_images/img_325e.PNG" class="align-center" src="_images/img_325e.PNG" />
+<ul class="simple">
+<li>Campo Rapporti struttura: campo multiplo composto da 3 colonne in cui è possibile inserire:</li>
+</ul>
+<p><a href="#id47"><span class="problematic" id="id48">*</span></a>.Tipo di rapporto (Si appoggia a, Gli si appoggia, Connesso con, Si sovrappone a, Gli si sovrappone, Ampliato da, Amplia, Uguale a);
+<a href="#id49"><span class="problematic" id="id50">*</span></a>.Sito: inserire il nome del sito a cui appartiene la struttura connessa (deve essere utilizzato un nome già schedato nella scheda Sito) ATTENZIONE: è necessario creare il link dinamico per avere i siti dalla scheda Sito.
+<a href="#id51"><span class="problematic" id="id52">*</span></a>.Sigla: colonna in cui è necessario schedare la sigla della struttura connessa. ATTENZIONE: è necessario collegare questo campo con le sigle presenti nel Thesarus Sigle.
+<a href="#id53"><span class="problematic" id="id54">*</span></a>.Numero: campo in cui è necessario segnalare il numero di struttura connessa.
+E&#8217; possibile segnalare illitmitati tipo di rapporto con varie strutture, anche tra siti differenti.
+ATTENZIONE: NON E&#8217; POSSIBILE ESEGUIRE RICERCHE IN QUESTO CAMPO. SAREBBE PERO&#8217; POSSIBILE CREARE UN MATRIX BASATO SU QUESTO TIPO DI RAPPORTI.</p>
+<p>Elementi costruttivi</p>
+<p>Sezione per la segnalazione dei materiali impiegati e degli elementri strutturali individuati.</p>
+<img alt="_images/img_325f.PNG" class="align-center" src="_images/img_325f.PNG" />
+<ul class="simple">
+<li>Campo Materiali impiegati: lista a tendina chiusa in cui è possibile segnalare i materiali impiegati nella struttura. ATTENZIONE: deve essere collegato al Thesaurus e non è possibile fare ricerche al suo interno.</li>
+<li>Campo Elementi strutturali: campo aperto che contiene 2 colonne in cui è possibile segnalare tipologia strutturale e quantità individuate. ATTENZIONE: deve essere collegato al Thesaurus e non è possibile fare ricerche al suo interno.</li>
+</ul>
+<p>Misure</p>
+<p>Sezione per la segnalazione delle misure legate alla struttura:</p>
+<img alt="_images/img_325g.PNG" class="align-center" src="_images/img_325g.PNG" />
+<ul class="simple">
+<li>Campo Misurazioni: campo aperto che contiene 3 colonne in cui è possibile segnalare tipologia di misura, unità di misura e valore. ATTENZIONE: deve essere collegato al Thesaurus e non è possibile fare ricerche al suo interno.</li>
+</ul>
+<p>Di seguito diamo una serie di esempi per ogni sezione della scheda.</p>
 <p>La scheda di struttura oltre ad assegnare una sigla e una definizione strutturale ad un
-raggruppamento di US, permette di andare a specificare in una serie di sezioni apposite i singoli elementi che la costituiscono.
-La parte alta dell&#8217;interfaccia presenta tre campi che fanno da identificatore: Sito, Sigla Struttura, Numero; la numerazione è progressiva a partire dalla coppia di valori Sito+Sigla struttura, del tipo:</p>
-<p><a href="#id47"><span class="problematic" id="id48">*</span></a>Sito 1, TB1
-<a href="#id49"><span class="problematic" id="id50">*</span></a>Sito 1, TB2
-<a href="#id51"><span class="problematic" id="id52">*</span></a>Sito 1, TB3
-<a href="#id53"><span class="problematic" id="id54">*</span></a>Sito 1, ED1
-<a href="#id55"><span class="problematic" id="id56">*</span></a>Sito 1, ED2
-<a href="#id57"><span class="problematic" id="id58">*</span></a>Sito 1, FO1</p>
+raggruppamento di US, permette di andare a specificare in una serie di sezioni apposite i singoli elementi che la costituiscono.</p>
+<p>La parte alta dell&#8217;interfaccia presenta tre campi che fanno da identificatore: Sito, Sigla Struttura, Numero; la numerazione è progressiva a partire dalla coppia di valori Sito+Sigla struttura, del tipo:</p>
+<p><a href="#id55"><span class="problematic" id="id56">*</span></a>Sito 1, TB1
+<a href="#id57"><span class="problematic" id="id58">*</span></a>Sito 1, TB2
+<a href="#id59"><span class="problematic" id="id60">*</span></a>Sito 1, TB3
+<a href="#id61"><span class="problematic" id="id62">*</span></a>Sito 1, ED1
+<a href="#id63"><span class="problematic" id="id64">*</span></a>Sito 1, ED2
+<a href="#id65"><span class="problematic" id="id66">*</span></a>Sito 1, FO1</p>
 <p>Al di sotto dei campi che costituiscono l&#8217;identificatore di struttura, ci sono altre tre caselle in cui è possibile andare a categorizzare il tipo di struttura schedata. Al momento il sistema è in via di elaborazione e le liste sono lasciate aperte. Nel primo campo si esplicita la categoria alla quale si riferisce, nel secondo la tipologia di struttura e infine la sua definizione. Un esempio che riportiamo qua sotto è riferito ad una Tomba con cassa:</p>
 <p>Categoria: Struttura funeraria
 Tipologia: Tomba
@@ -632,6 +695,9 @@ Nella sezione dati descrittivi viene inserita la descrizione tecnica della strut
 Qui si va a segnalare periodi e fasi iniziali e finali specificati nella scheda di Periodizzazione per meglio definire inizio e fine della struttura. Al di sotto è possibile inserire i rapporti diretti con altre strutture, segnalando tipo di rapporto, sito, sigla di struttura e numero.</p>
 <p>Elementi costruttivi
 È una sezione altamente sperimentale, in cui è possibile andare ad elencare i singoli materiali di cui è composta la struttura, gli elementi strutturali e tutti i tipi di misure.</p>
+</div>
+<div class="section" id="revisionato-fino-a-qui-5-1-2018">
+<h3>Revisionato fino a qui: 5/1/2018<a class="headerlink" href="#revisionato-fino-a-qui-5-1-2018" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="scheda-inventario-reperti">
 <h3>3.2.5 Scheda Inventario Reperti<a class="headerlink" href="#scheda-inventario-reperti" title="Permalink to this headline">¶</a></h3>
@@ -843,6 +909,7 @@ Infine caricare il layer pyarchinit_us_view, aprire lo stile us_caratterizzazion
 </li>
 <li><a class="reference internal" href="#scheda-periodizzazione">3.2.4 Scheda Periodizzazione</a></li>
 <li><a class="reference internal" href="#scheda-struttura">3.2.5 Scheda Struttura</a></li>
+<li><a class="reference internal" href="#revisionato-fino-a-qui-5-1-2018">Revisionato fino a qui: 5/1/2018</a></li>
 <li><a class="reference internal" href="#scheda-inventario-reperti">3.2.5 Scheda Inventario Reperti</a></li>
 <li><a class="reference internal" href="#scheda-tafonomica">3.2.6 Scheda Tafonomica</a></li>
 </ul>
