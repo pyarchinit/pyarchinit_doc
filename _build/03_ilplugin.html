@@ -508,7 +508,22 @@ Per esempio, se 1 copre 2, 2 copre 3 e 4, ma 3 e 4 non hanno rapporti tra di lor
 </div>
 <div class="section" id="scheda-periodizzazione">
 <h3>3.2.4 Scheda Periodizzazione<a class="headerlink" href="#scheda-periodizzazione" title="Permalink to this headline">¶</a></h3>
-<p>La scheda di Periodizzazione serve a definire la cronologia relativa della stratigrafia, scandendola in periodi e fasi. Un periodo di un sito archeologico può essere variabile a seconda del contesto, ma in linea di massima serve a specificare un luogo per la sua definizione d&#8217;uso all&#8217;interno di un determinato lasso di tempo. Per esempio una villa di epoca romana che diviene in seguito un cimitero e infine una pieve, avrà sostanzialmente tre periodi:</p>
+<p>La scheda di Periodizzazione serve a definire la cronologia relativa della stratigrafia, scandendola in periodi e fasi. Un periodo di un sito archeologico può essere variabile a seconda del contesto, ma in linea di massima serve a specificare un luogo per la sua definizione d&#8217;uso all&#8217;interno di un determinato lasso di tempo.</p>
+<p>Alla scheda si accede dalla toolbar di pyArchInit tramite il pulsante:</p>
+<img alt="_images/img_324.PNG" class="align-center" src="_images/img_324.PNG" />
+<p>La scheda presenta un&#8217;unica interfaccia con i seguenti campi:</p>
+<ul class="simple">
+<li>Campo Sito: lista a tendina che prende i valori dal campo sito della Scheda Sito.</li>
+<li>Campo Periodo: Lista a tendina aperta, vuole solo valori di tipo numero intero, per segnalare il Periodo.</li>
+<li>Campo Fase: Lista a tendina aperta, vuole solo valori di tipo numero intero, per segnalare la Fase.</li>
+<li>Campo Codice periodo: campo aperto di tipo numero intero positivo, serve a segnalare il codice univoco di periodo/fase in un sito ed è utilizzato dal sistema per generare le piante di periodizzazione con o senza continuità di periodo.</li>
+<li>Campo Descrizione: campo aperto per descrivere la periodizzazione schedata.</li>
+<li>Campo Cronologia Iniziale: campo aperto di tipo numero intero per segnalare la cronologia iniziale assoluta. Si basa sulla datazione Prima e Dopo Cristo. Può accettare anche valori negativi per segnalare la datazione a.C.. E&#8217; sfruttato per fare piante di periodizzazione trasversali tra più siti in base alla cronologia assoluta. E&#8217; utilizzato direttamente dal Time Manager per creare piante di periodizzazione basate su cronologia assoluta direttamente da pyArchInit (Vedi il capitolo dedicato).</li>
+<li>Campo Cronologia Finale: campo aperto di tipo numero intero per segnalare la cronologia finale assoluta. Si basa sulla datazione Prima e Dopo Cristo. Può accettare anche valori negativi per segnalare la datazione a.C.. E&#8217; sfruttato per fare piante di periodizzazione trasversali tra più siti in base alla cronologia assoluta. E&#8217; utilizzato direttamente dal Time Manager per creare piante di periodizzazione basate su cronologia assoluta direttamente da pyArchInit (Vedi il capitolo dedicato).</li>
+<li>Campo Cronologia Estesa Letterale: campo aperto di tipo alfanumerico per segnalare l&#8217;intera periodizzazione in termini descrittivi.</li>
+</ul>
+<img alt="_images/img_324a.PNG" class="align-center" src="_images/img_324a.PNG" />
+<p>Per capire come deve essere utilizzata la scheda di periodizzazione, riportiamo di seguito un esempio: una villa di epoca romana che diventa in seguito un cimitero e infine una pieve, avrà sostanzialmente tre periodi:</p>
 <p><a href="#id19"><span class="problematic" id="id20">*</span></a>Periodo I: VI – VIII secolo – Pieve con battistero e cimitero annesso
 <a href="#id21"><span class="problematic" id="id22">*</span></a>Periodo II: VI-VII secolo – Riuso cimiteriale del sito
 <a href="#id23"><span class="problematic" id="id24">*</span></a>Periodo III: I-V secolo d.C. - Villa romana</p>
@@ -524,14 +539,77 @@ Per esempio, se 1 copre 2, 2 copre 3 e 4, ma 3 e 4 non hanno rapporti tra di lor
 <a href="#id41"><span class="problematic" id="id42">*</span></a>Fase 1: restringimento dell&#8217;insediamento
 <a href="#id43"><span class="problematic" id="id44">*</span></a>Fase 2: espansione e aggiunta di nuovi ambienti
 <a href="#id45"><span class="problematic" id="id46">*</span></a>Fase 3: primo impianto della villa</p>
-<p>Come si può intuire dalla soprastante scansione cronologica, i periodi sono definiti dal più recente al più antico da un numero intero che va da n a n+1, per poter sfruttare i numeri a livello informatico per gli algoritmi di ordinamento e per poter aggiungere periodi e fasi più antiche, lasciando aperta la ricerca.
-Istintivamente infatti si tenderebbe ad assegnare il numero più basso al periodo più antico, tuttavia questo metterebbe un punto fermo nell&#8217;analisi, nel caso emergessero periodi più antichi che obbligherebbero o a rivedere l&#8217;ordinamento dei periodi oppure ad assegnare numeri negativi al di sotto Periodo 1.
-All&#8217;interno di un periodo le fasi vengono definite con il numero più basso per la più antica e con la cifra più alta per la più recente.
-Alla periodizzazione relativa è possibile agganciare una cronologia assoluta, nel nostro caso dei numeri interi legati al sistema fissato sulla nascita di Cristo. Semplicemente i numeri avanti Cristo dovranno assumere un valore negativo.
-È possibile anche assegnare una cronologia assoluta di tipo alfanumerico, in cui definire tramite una stringa di testo a quale cronologia vogliamo riferirci; ad esempio un periodo/fase che data tra il -199 e il 150, potrà essere definito come inizi II secolo a.C. - prima metà del II secolo d.C..</p>
-<p>In un apposito campo è possibile andare ad inserire la continuità periodo, un codice definito dall&#8217;utente in fase finale di interpretazione dei dati; è un numero intero positivo, che va dal numero 1 fino ad n, dal periodo più recente fino al più antico. Tale numero permette attraverso apposita query di richiamare in automatico tutte quelle US formatesi in un certo periodo o che fino a quel periodo continuano ad esistere. Mediante un pulsante unico è possibile richiamare tutte le US che afferiscono a tale continuità di periodo.
-Ad esempio un pavimento della fase più antica che ha come codice di continuità periodo 5, continua ad essere utilizzato fino al periodo successivo che ha per numero 3.
-Uno script genera nella scheda US il codice per poter richiamare tale pavimentazione in tutte le fasi, dalla prima in cui compare alle intermedie (si veda a tal proposito la sezione periodizzazione della scheda US, in cui viene esposto il concetto di periodo iniziale e finale).</p>
+<p>Come si può intuire dalla soprastante scansione cronologica, i periodi sono definiti dal più recente al più antico da un numero intero che a partire da 1 aumenta in maniera progressiva, per poter sfruttare i numeri a livello informatico per gli algoritmi di ordinamento e per poter aggiungere periodi e fasi più antiche, lasciando aperta la ricerca. A volte vengono usati nel modello cartaceo i numeri romani (I, II, II, IV e così via, ma questo pone dei limiti informatici che possono essere risolti con un semplice numero arabo).</p>
+<p>Istintivamente infatti si tenderebbe ad assegnare il numero più basso al periodo più antico, tuttavia questo metterebbe un punto fermo nell&#8217;analisi, nel caso emergessero periodi più antichi che obbligherebbero o a rivedere l&#8217;ordinamento dei periodi oppure ad assegnare numeri negativi al di sotto Periodo 1.</p>
+<p>All&#8217;interno di un periodo le fasi vengono definite con il numero più basso per la più antica e con la cifra più alta per la più recente, questo perchè in generale se abbiamo definito un periodo, dovrebbero essere chiare le sue fasi interne. Questo potrebbe essere tuttavia opinabile su scavi di grandi dimensioni e che si protraggono per più campagne negli anni. Per questo, si può adottare per le fase, il medesimo sistema dei periodi (1 più recente, 1+n più antico), dato che pyArchInit non sfrutta direttamente i numeri di periodo e fase per gestire la generazione di piante di fase.</p>
+<p>Alla periodizzazione relativa è possibile agganciare una cronologia assoluta, nel nostro caso dei numeri interi legati al sistema fissato sulla nascita di Cristo. Semplicemente i numeri avanti Cristo dovranno assumere un valore negativo.</p>
+<p>È possibile anche assegnare una cronologia assoluta di tipo alfanumerico, in cui definire tramite una stringa di testo a quale cronologia vogliamo riferirci; ad esempio un periodo/fase che data tra il -199 e il 150, potrà essere definito come inizi II secolo a.C. - prima metà del II secolo d.C..</p>
+<p>Nel campo codice periodo è possibile andare ad inserire un codice univoco della singola periodizzazione (è questo il campo magico che permette di costruire le piante di fase);codice periodo è un numero intero positivo, che va dal numero 1 fino ad n, dal periodo più antico fino al più recente. Tale numero permette attraverso apposita query di richiamare in automatico tutte quelle US formatesi in un certo periodo o che fino a quel periodo continuano ad esistere.</p>
+<p>Nel caso preso in esame si otterrebbe la seguente sequenza di codice periodo:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="7%" />
+<col width="21%" />
+<col width="62%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Periodo</th>
+<th class="head">Fase</th>
+<th class="head">codice periodo</th>
+<th class="head">Descrizione</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>1</td>
+<td>1</td>
+<td>Abbandono della pieve</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>2</td>
+<td>2</td>
+<td>Modifica orientamento della pieve</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>3</td>
+<td>3</td>
+<td>Primo insediamento plebano</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>1</td>
+<td>4</td>
+<td>Massima espansione del cimitero</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>2</td>
+<td>5</td>
+<td>Impianto del primo cimitero</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>1</td>
+<td>6</td>
+<td>Restringimento dell&#8217;insediamento</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>2</td>
+<td>7</td>
+<td>Espansione e aggiunta di nuovi ambienti</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>3</td>
+<td>8</td>
+<td>Primo impianto della villa romana</td>
+</tr>
+</tbody>
+</table>
+<p>Come detto sopra, tramite il codice di periodo, è possibile generare piante di periodizzazione composita. E&#8217; possibile farlo in 3 modi: dalla scheda US (Vedi Capitolo Scheda US/USM); direttamente da Qgis (Vedi Capitolo Scheda US/USM); dalla scheda di Periodizzazione.</p>
+<p>Per l&#8217;ultimo caso, se volete richiamare le US attraverso la scheda di Periodizzazione
+basterà posizionarvi sul periodo che volete visualizzare e cliccare il pulsante Visualizza periodo sul Gis.</p>
+<img alt="_images/img_324b.PNG" class="align-right" src="_images/img_324b.PNG" />
+<p>Appariranno tutte le US/USM presenti in quella periodizzazione, comprese quelle che sopravvivono fino a quel periodo e non dovrete preoccuparvi di creare voi il codice SQL per generare la query. Il layer caricati e interrogati sono pyarchinit_US_view e pyarchinit_quote_view; vengono già mostrati in legenda con il periodo/fase richiamato.</p>
+<img alt="_images/img_324c.PNG" class="align-center" src="_images/img_324c.PNG" />
+<p>Un&#8217;altra modalità di creare piante composite basate sulla periodizzazione si travo nel capitolo dedicato al Time Manager.</p>
 </div>
 <div class="section" id="scheda-struttura">
 <h3>3.2.5 Scheda Struttura<a class="headerlink" href="#scheda-struttura" title="Permalink to this headline">¶</a></h3>

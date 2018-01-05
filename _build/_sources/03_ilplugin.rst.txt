@@ -668,7 +668,29 @@ Ora basta andare in sezione Tools -> Esportazione ed esportare Schede e Indice.
 3.2.4 Scheda Periodizzazione
 ------------------------------
 
-La scheda di Periodizzazione serve a definire la cronologia relativa della stratigrafia, scandendola in periodi e fasi. Un periodo di un sito archeologico può essere variabile a seconda del contesto, ma in linea di massima serve a specificare un luogo per la sua definizione d'uso all'interno di un determinato lasso di tempo. Per esempio una villa di epoca romana che diviene in seguito un cimitero e infine una pieve, avrà sostanzialmente tre periodi:
+La scheda di Periodizzazione serve a definire la cronologia relativa della stratigrafia, scandendola in periodi e fasi. Un periodo di un sito archeologico può essere variabile a seconda del contesto, ma in linea di massima serve a specificare un luogo per la sua definizione d'uso all'interno di un determinato lasso di tempo. 
+
+Alla scheda si accede dalla toolbar di pyArchInit tramite il pulsante:
+
+.. image:: ./_images/img_324.PNG
+   :align: center  
+
+
+La scheda presenta un'unica interfaccia con i seguenti campi:
+
+* Campo Sito: lista a tendina che prende i valori dal campo sito della Scheda Sito.
+* Campo Periodo: Lista a tendina aperta, vuole solo valori di tipo numero intero, per segnalare il Periodo.
+* Campo Fase: Lista a tendina aperta, vuole solo valori di tipo numero intero, per segnalare la Fase.
+* Campo Codice periodo: campo aperto di tipo numero intero positivo, serve a segnalare il codice univoco di periodo/fase in un sito ed è utilizzato dal sistema per generare le piante di periodizzazione con o senza continuità di periodo.
+* Campo Descrizione: campo aperto per descrivere la periodizzazione schedata.
+* Campo Cronologia Iniziale: campo aperto di tipo numero intero per segnalare la cronologia iniziale assoluta. Si basa sulla datazione Prima e Dopo Cristo. Può accettare anche valori negativi per segnalare la datazione a.C.. E' sfruttato per fare piante di periodizzazione trasversali tra più siti in base alla cronologia assoluta. E' utilizzato direttamente dal Time Manager per creare piante di periodizzazione basate su cronologia assoluta direttamente da pyArchInit (Vedi il capitolo dedicato).
+* Campo Cronologia Finale: campo aperto di tipo numero intero per segnalare la cronologia finale assoluta. Si basa sulla datazione Prima e Dopo Cristo. Può accettare anche valori negativi per segnalare la datazione a.C.. E' sfruttato per fare piante di periodizzazione trasversali tra più siti in base alla cronologia assoluta. E' utilizzato direttamente dal Time Manager per creare piante di periodizzazione basate su cronologia assoluta direttamente da pyArchInit (Vedi il capitolo dedicato).
+* Campo Cronologia Estesa Letterale: campo aperto di tipo alfanumerico per segnalare l'intera periodizzazione in termini descrittivi.
+
+.. image:: ./_images/img_324a.PNG
+   :align: center  
+
+Per capire come deve essere utilizzata la scheda di periodizzazione, riportiamo di seguito un esempio: una villa di epoca romana che diventa in seguito un cimitero e infine una pieve, avrà sostanzialmente tre periodi:
 
 *Periodo I: VI – VIII secolo – Pieve con battistero e cimitero annesso
 *Periodo II: VI-VII secolo – Riuso cimiteriale del sito
@@ -691,15 +713,51 @@ All'interno di questi periodi potranno essere individuate le singole fasi di uso
 *Fase 2: espansione e aggiunta di nuovi ambienti
 *Fase 3: primo impianto della villa
 
-Come si può intuire dalla soprastante scansione cronologica, i periodi sono definiti dal più recente al più antico da un numero intero che va da n a n+1, per poter sfruttare i numeri a livello informatico per gli algoritmi di ordinamento e per poter aggiungere periodi e fasi più antiche, lasciando aperta la ricerca.
+Come si può intuire dalla soprastante scansione cronologica, i periodi sono definiti dal più recente al più antico da un numero intero che a partire da 1 aumenta in maniera progressiva, per poter sfruttare i numeri a livello informatico per gli algoritmi di ordinamento e per poter aggiungere periodi e fasi più antiche, lasciando aperta la ricerca. A volte vengono usati nel modello cartaceo i numeri romani (I, II, II, IV e così via, ma questo pone dei limiti informatici che possono essere risolti con un semplice numero arabo).
+
 Istintivamente infatti si tenderebbe ad assegnare il numero più basso al periodo più antico, tuttavia questo metterebbe un punto fermo nell'analisi, nel caso emergessero periodi più antichi che obbligherebbero o a rivedere l'ordinamento dei periodi oppure ad assegnare numeri negativi al di sotto Periodo 1.
-All'interno di un periodo le fasi vengono definite con il numero più basso per la più antica e con la cifra più alta per la più recente.
+
+All'interno di un periodo le fasi vengono definite con il numero più basso per la più antica e con la cifra più alta per la più recente, questo perchè in generale se abbiamo definito un periodo, dovrebbero essere chiare le sue fasi interne. Questo potrebbe essere tuttavia opinabile su scavi di grandi dimensioni e che si protraggono per più campagne negli anni. Per questo, si può adottare per le fase, il medesimo sistema dei periodi (1 più recente, 1+n più antico), dato che pyArchInit non sfrutta direttamente i numeri di periodo e fase per gestire la generazione di piante di fase.
+
 Alla periodizzazione relativa è possibile agganciare una cronologia assoluta, nel nostro caso dei numeri interi legati al sistema fissato sulla nascita di Cristo. Semplicemente i numeri avanti Cristo dovranno assumere un valore negativo.
+
 È possibile anche assegnare una cronologia assoluta di tipo alfanumerico, in cui definire tramite una stringa di testo a quale cronologia vogliamo riferirci; ad esempio un periodo/fase che data tra il -199 e il 150, potrà essere definito come inizi II secolo a.C. - prima metà del II secolo d.C..
 
-In un apposito campo è possibile andare ad inserire la continuità periodo, un codice definito dall'utente in fase finale di interpretazione dei dati; è un numero intero positivo, che va dal numero 1 fino ad n, dal periodo più recente fino al più antico. Tale numero permette attraverso apposita query di richiamare in automatico tutte quelle US formatesi in un certo periodo o che fino a quel periodo continuano ad esistere. Mediante un pulsante unico è possibile richiamare tutte le US che afferiscono a tale continuità di periodo.
-Ad esempio un pavimento della fase più antica che ha come codice di continuità periodo 5, continua ad essere utilizzato fino al periodo successivo che ha per numero 3.
-Uno script genera nella scheda US il codice per poter richiamare tale pavimentazione in tutte le fasi, dalla prima in cui compare alle intermedie (si veda a tal proposito la sezione periodizzazione della scheda US, in cui viene esposto il concetto di periodo iniziale e finale).
+Nel campo codice periodo è possibile andare ad inserire un codice univoco della singola periodizzazione (è questo il campo magico che permette di costruire le piante di fase);codice periodo è un numero intero positivo, che va dal numero 1 fino ad n, dal periodo più antico fino al più recente. Tale numero permette attraverso apposita query di richiamare in automatico tutte quelle US formatesi in un certo periodo o che fino a quel periodo continuano ad esistere.
+
+Nel caso preso in esame si otterrebbe la seguente sequenza di codice periodo:
+
+======= ===== ============== ==========================================
+Periodo Fase  codice periodo Descrizione
+======= ===== ============== ==========================================
+1        1    1              Abbandono della pieve
+1        2    2              Modifica orientamento della pieve
+1        3    3              Primo insediamento plebano
+2        1    4              Massima espansione del cimitero
+2        2    5              Impianto del primo cimitero
+3        1    6              Restringimento dell'insediamento
+3        2    7              Espansione e aggiunta di nuovi ambienti
+3        3    8              Primo impianto della villa romana
+======= ===== ============== ==========================================
+
+Come detto sopra, tramite il codice di periodo, è possibile generare piante di periodizzazione composita. E' possibile farlo in 3 modi: dalla scheda US (Vedi Capitolo Scheda US/USM); direttamente da Qgis (Vedi Capitolo Scheda US/USM); dalla scheda di Periodizzazione.
+
+Per l'ultimo caso, se volete richiamare le US attraverso la scheda di Periodizzazione 
+basterà posizionarvi sul periodo che volete visualizzare e cliccare il pulsante Visualizza periodo sul Gis.
+
+.. image:: ./_images/img_324b.PNG
+   :align: right  
+
+Appariranno tutte le US/USM presenti in quella periodizzazione, comprese quelle che sopravvivono fino a quel periodo e non dovrete preoccuparvi di creare voi il codice SQL per generare la query. Il layer caricati e interrogati sono pyarchinit_US_view e pyarchinit_quote_view; vengono già mostrati in legenda con il periodo/fase richiamato.
+
+.. image:: ./_images/img_324c.PNG
+   :align: center
+
+Un'altra modalità di creare piante composite basate sulla periodizzazione si travo nel capitolo dedicato al Time Manager.   
+
+
+
+
 
 
 3.2.5 Scheda Struttura
