@@ -17,6 +17,7 @@ Contents:
    02_preparazione.rst
    03_ilplugin.rst
    04_documentare.rst
+   05_installazione.rst
    
 
 
