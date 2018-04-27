@@ -1,10 +1,21 @@
 5. Installazione
 ****************************************
-todo..
+Ecco una serie di tutorial per l'installazione di pyArchInit.
 
-5.1 Installazione della master per il debug in Windows (Testato su Windows 7 e Windows 10, 32 bit e 64bit)
-============================================================================================================
-Al momento stiamo testando il porting dalla versione 2.7 di python alla versione 3. Il nuovo pyArchInit andrà sotto al nome di pyArchInit 3 - Garibaldi.
+
+5.1 pyArchInit 3 per Qgis 3 su Windows
+======================================
+
+Versione pyArchInit: 3
+Nome: Garibaldi
+Versione di Qgis richiesta: Qgis 3.x
+Sistema operativo: Windows 7 e Windows 10
+Testato su: Windows 7 e Windows 10 a 32 bit e 64bit
+Usabilità: SOLO PER IL DEBUG
+Versione python: 3.x
+Prerequisiti richiesti: Graphviz 2.x, moduli python: sqlalchemy, reportlab, graphviz forniti con l'installer di pyarchinit da eseguire a parte.
+
+Al momento stiamo testando il porting dalla versione 2.7 di Python alla versione 3. Il nuovo pyArchInit andrà sotto al nome di pyArchInit 3 - Garibaldi.
 Se vuoi aiutarci a correggere i problemi e gli errori segui questi semplici step.
 
 !!!!WARNING!!!! L'installazione crea una cartella di nome "pyarchinit" all'interno del vostro utente.
