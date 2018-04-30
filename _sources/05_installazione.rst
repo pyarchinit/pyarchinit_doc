@@ -3,13 +3,13 @@
 Ecco una serie di tutorial per l'installazione di pyArchInit.
 
 
-5.1 pyArchInit 3 per Qgis 3 su Windows
+5.1 pyArchInit 3 per QGIS 3 su Windows
 ======================================
 
 Versione pyArchInit: 3
 
 * Nome: Garibaldi
-* Versione di Qgis richiesta: Qgis 3.x
+* Versione di QGIS richiesta: QGIS 3.x
 * Sistema operativo: Windows 7 e Windows 10
 * Testato su: Windows 7 e Windows 10 a 32 bit e 64bit
 * Usabilità: SOLO PER IL DEBUG
@@ -23,15 +23,15 @@ Se vuoi aiutarci a correggere i problemi e gli errori segui questi semplici step
 
 Sinceratevi che sotto a "C:\\Utenti\\vostroutente\\" non vi sia alcuna cartella chiamata "pyarchinit". !!!!WARNING!!!!
 
-1 - Scaricare QGIS da https://qgis.org/it/site/
+1 - Scaricare QGIS da https://QGIS.org/it/site/
 
 2 - Scaricare Graphviz da http://www.graphviz.org/
 
-3 - Scaricare la versione master di pyarchinit da: https://github.com/serenasensini/pyarchinit_3
+3 - Scaricare la release più recente di pyarchinit da: https://github.com/pyarchinit/pyarchinit/releases
 
-4 - Estrarre dalla cartella pyarchinit-master.zip /scripts il file modules_installer.py in un cartella che in seguito potremo raggiungere
+4 - Estrarre dalla cartella pyarchinit-release-xxx /scripts il file modules_installer.py in un cartella che in seguito potremo raggiungere
 
-5 - Avviare "Osgeo4W Shell" facendo tasto destra "Esegui come amministratore". Potete cercarla sotto Avvio o Start -> Programmi ->Qgis 
+5 - Avviare "Osgeo4W Shell" facendo tasto destra "Esegui come amministratore". Potete cercarla sotto Avvio o Start -> Programmi ->QGIS 
 
 6 - Nella shell digitate: >>py3_env e date invio.
 
@@ -49,17 +49,21 @@ Se c'è allora proseguite allo step 8 altrimenti rifate lo step 7.
 
 8 - digitate nella shell il seguente comando >>python modules_installer.py e date invio. Una volta terminato il processo potete chiudere la shell.
 
-9 - Lanciate Qgis.
+9 - Lanciate QGIS.
 
-10 - Dal menù in altro cercate Plugins->Gestici e installa plugin... e selezionate la sezione "Installa da zip". Selezionate il file pyarchinit-master.zip e cliccate su "Installa plugin". Attendete.
+10 - Dal menù in altro cercate Plugins->Gestici e installa plugin... 
 
-!!!!WARNING!!!!IN FASE DI SPERIMENTAZIONE!!!!WARNING!!!!
+A - SE NON AVETE ALTRE VERSIONI di pyArchInit installate procedete con: selezionate la sezione "Installa da zip". Selezionate il file pyarchinit-release-xxx.zip e cliccate su "Installa plugin". Attendete. 
+
+
+B - SE AVETE ALTRE VERSIONI di pyArchInit installate , DISINSTALLATELE e poi ripetete il passaggio A.
+
 
 11 - Se vi appare correttamente il plugin, andate nelle configurazioni di pyArchInit cliccando sul pulsante
 
 .. image:: ./_images/img_51.PNG
    :align: center
    
-Aggiungete nella casella delle variabili il percorso C:\\Program Files (x86)\\bin e salvate.
+Andate nella sezione "Graphviz", cliccate sui "..." (tre puntini) e cercate il percorso alla cartella bin di Graphviz (indicativamente dovrebbe essere C:/Program Files (x86)/Graphviz2.38/bin).  Cliccate su Salva.
 
-!!!!WARNING!!!!!!!!WARNING!!!!!!!!WARNING!!!!!!!!WARNING!!!!!!!!WARNING!!!!!!!!WARNING!!!!!!!!WARNING!!!!
+12 - Riavviate QGIS e buon lavoro!!!
