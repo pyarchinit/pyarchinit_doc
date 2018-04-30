@@ -23,13 +23,13 @@ Se vuoi aiutarci a correggere i problemi e gli errori segui questi semplici step
 
 Sinceratevi che sotto a "C:\\Utenti\\vostroutente\\" non vi sia alcuna cartella chiamata "pyarchinit". !!!!WARNING!!!!
 
-1 - Scaricare QGIS da https://QGIS.org/it/site/
+1 - Scaricare QGIS da https://QGIS.org/it/site/ e installatelo.
 
-2 - Scaricare Graphviz da http://www.graphviz.org/
+2 - Scaricare Graphviz da http://www.graphviz.org/ e installatelo.
 
 3 - Scaricare la release più recente di pyarchinit da: https://github.com/pyarchinit/pyarchinit/releases
 
-4 - Estrarre dalla cartella pyarchinit-release-xxx /scripts il file modules_installer.py in un cartella che in seguito potremo raggiungere
+4 - Estrarre dalla cartella pyarchinit-release-xxx/scripts il file modules_installer.py in un cartella che in seguito potremo raggiungere
 
 5 - Avviare "Osgeo4W Shell" facendo tasto destra "Esegui come amministratore". Potete cercarla sotto Avvio o Start -> Programmi ->QGIS 
 
