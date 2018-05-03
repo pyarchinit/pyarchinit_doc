@@ -16,6 +16,8 @@ Versione pyArchInit: 3
 * Versione python: 3.x
 * Prerequisiti richiesti: Graphviz 2.x (da installare a parte) moduli python: sqlalchemy, reportlab, graphviz forniti con l'installer di pyarchinit da eseguire a parte.
 
+Se volete seguire step by step il tutorial tramite video, tenete aperto questo link: https://youtu.be/Y-RTE_egD34
+
 Al momento stiamo testando il porting dalla versione 2.7 di Python alla versione 3. Il nuovo pyArchInit andrà sotto al nome di pyArchInit 3 - Garibaldi.
 Se vuoi aiutarci a correggere i problemi e gli errori segui questi semplici step.
 
@@ -67,3 +69,4 @@ B - SE AVETE ALTRE VERSIONI di pyArchInit installate , DISINSTALLATELE e poi rip
 Andate nella sezione "Graphviz", cliccate sui "..." (tre puntini) e cercate il percorso alla cartella bin di Graphviz (indicativamente dovrebbe essere C:/Program Files (x86)/Graphviz2.38/bin).  Cliccate su Salva.
 
 12 - Riavviate QGIS e buon lavoro!!!
+
