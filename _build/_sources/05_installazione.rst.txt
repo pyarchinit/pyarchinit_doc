@@ -31,25 +31,31 @@ Sinceratevi che sotto a "C:\\Utenti\\vostroutente\\" non vi sia alcuna cartella 
 
 3 - Scaricare la release più recente di pyarchinit da: https://github.com/pyarchinit/pyarchinit/releases
 
-4 - Estrarre dalla cartella pyarchinit-release-xxx/scripts il file modules_installer.py in un cartella che in seguito potremo raggiungere
+-----------
 
-5 - Avviare "Osgeo4W Shell" facendo tasto destra "Esegui come amministratore". Potete cercarla sotto Avvio o Start -> Programmi ->QGIS 
+VAI DIRETTAMENTE ALLO STEP 9. PUOI SALTARE QUESTI PASSAGGI, MA NEL CASO NON ANDASSE A BUON FINE PROVA IL SEGUENTE METODO.
 
-6 - Nella shell digitate: >>py3_env e date invio.
+	4 - Estrarre dalla cartella pyarchinit-release-xxx/scripts il file modules_installer.py in un cartella che in seguito potremo raggiungere
 
-7 - Navigate nella shell per posizionarvi sulla cartella in cui avete estratto il file modules_installer.py.
-Se non lo avete mai fatto sappiate che il comand cd sta per choos directory e vi permette di scegliere una cartella in cui entrare; il simbolo composto cd <SPAZIO> e due punti fermi consecutivi, ovvero cd .. serve per andare indietro di una cartella. 
+	5 - Avviare "Osgeo4W Shell" facendo tasto destra "Esegui come amministratore". Potete cercarla sotto Avvio o Start -> Programmi ->QGIS 
 
-Quindi se abbiamo estratto sotto al nostro utente il file, nella console scriviamo >>cd C:\\users\\nomedelmioutente\\ e date invio.
+	6 - Nella shell digitate: >>py3_env e date invio.
 
-In questo modo saremo nella cartella utente.
+	7 - Navigate nella shell per posizionarvi sulla cartella in cui avete estratto il file modules_installer.py.
+	Se non lo avete mai fatto sappiate che il comand cd sta per choos directory e vi permette di scegliere una cartella in cui entrare; il simbolo composto cd <SPAZIO> e due punti fermi consecutivi, ovvero cd .. serve per andare indietro di una cartella. 
 
-Per sapere se il nostro file è presente date il seguente comando per listare la cartella >>dir e date invio.
+	Quindi se abbiamo estratto sotto al nostro utente il file, nella console scriviamo >>cd C:\\users\\nomedelmioutente\\ e date invio.
 
-Vi appariranno tutti i file che sono presenti nella vostra cartella utente. Guardate se c'è il file modules_installer.py.
-Se c'è allora proseguite allo step 8 altrimenti rifate lo step 7.
+	In questo modo saremo nella cartella utente.
 
-8 - digitate nella shell il seguente comando >>python modules_installer.py e date invio. Una volta terminato il processo potete chiudere la shell.
+	Per sapere se il nostro file è presente date il seguente comando per listare la cartella >>dir e date invio.
+
+	Vi appariranno tutti i file che sono presenti nella vostra cartella utente. Guardate se c'è il file modules_installer.py.
+	Se c'è allora proseguite allo step 8 altrimenti rifate lo step 7.
+
+	8 - digitate nella shell il seguente comando >>python modules_installer.py e date invio. Una volta terminato il processo potete chiudere la shell.
+	
+-----------
 
 9 - Lanciate QGIS.
 
