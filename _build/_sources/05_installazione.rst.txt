@@ -16,7 +16,7 @@ Versione pyArchInit: 3
 * Versione python: 3.x
 * Prerequisiti richiesti: Graphviz 2.x (da installare a parte) moduli python: sqlalchemy, reportlab, graphviz forniti con l'installer di pyarchinit da eseguire a parte.
 
-Se volete seguire step by step il tutorial tramite video, tenete aperto questo link: https://youtu.be/Y-RTE_egD34
+Se volete seguire step by step il tutorial tramite video, tenete aperto questo link: https://youtu.be/pX8aUdbJNJM
 
 Al momento stiamo testando il porting dalla versione 2.7 di Python alla versione 3. Il nuovo pyArchInit andrà sotto al nome di pyArchInit 3 - Garibaldi.
 Se vuoi aiutarci a correggere i problemi e gli errori segui questi semplici step.
@@ -38,7 +38,7 @@ Sinceratevi che sotto a "C:\\Utenti\\vostroutente\\" non vi sia alcuna cartella 
 
 5 - Dal menù in alto cercate Plugins->Gestici e installa plugin... 
 
-A - SE NON AVETE ALTRE VERSIONI di pyArchInit installate procedete con: selezionate la sezione "Installa da zip". Selezionate il file pyarchinit-master.zip e cliccate su "Installa plugin". Attendete. 
+A - SE NON AVETE ALTRE VERSIONI di pyArchInit installate  e procedete con: selezionate la sezione "Installa da zip". Selezionate il file pyarchinit-master.zip e cliccate su "Installa plugin". Attendete. 
 
 
 B - SE AVETE ALTRE VERSIONI di pyArchInit installate , DISINSTALLATELE e poi ripetete il passaggio A.
