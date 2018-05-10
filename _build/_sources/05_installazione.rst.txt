@@ -30,21 +30,41 @@ Sinceratevi che sotto a "C:\\Utenti\\vostroutente\\" non vi sia alcuna cartella 
 2 - Scaricare Graphviz da http://www.graphviz.org/ e installatelo.
 
 3 - Scaricare la release più recente di pyarchinit da: https://github.com/pyarchinit/pyarchinit/archive/master.zip
+
 (Il codice è scaricato dal repository ufficiale https://github.com/pyarchinit/pyarchinit)
 
-VAI DIRETTAMENTE ALLO STEP 9. PUOI SALTARE QUESTI PASSAGGI, MA NEL CASO NON ANDASSE A BUON FINE PROVA IL SEGUENTE METODO.
 
------------
+4 - Lanciate QGIS.
+
+5 - Dal menù in alto cercate Plugins->Gestici e installa plugin... 
+
+A - SE NON AVETE ALTRE VERSIONI di pyArchInit installate procedete con: selezionate la sezione "Installa da zip". Selezionate il file pyarchinit-master.zip e cliccate su "Installa plugin". Attendete. 
+
+
+B - SE AVETE ALTRE VERSIONI di pyArchInit installate , DISINSTALLATELE e poi ripetete il passaggio A.
+
+
+6 - Se vi appare correttamente il plugin, andate nelle configurazioni di pyArchInit cliccando sul pulsante
+
+.. image:: ./_images/img_51.PNG
+   :align: center
+   
+Andate nella sezione "Graphviz", cliccate sui "..." (tre puntini) e cercate il percorso alla cartella bin di Graphviz (indicativamente dovrebbe essere C:/Program Files (x86)/Graphviz2.38/bin).  Cliccate su Salva.
+
+7 - Riavviate QGIS e buon lavoro!!!
 
 
 
-	4 - Estrarre dalla cartella pyarchinit-release-xxx/scripts il file modules_installer.py in un cartella che in seguito potremo raggiungere
+NEL CASO NON ANDASSE A BUON FINE PROVA IL SEGUENTE METODO.
 
-	5 - Avviare "Osgeo4W Shell" facendo tasto destra "Esegui come amministratore". Potete cercarla sotto Avvio o Start -> Programmi ->QGIS 
 
-	6 - Nella shell digitate: >>py3_env e date invio.
+	1 - Estrarre dalla cartella pyarchinit-master/scripts il file modules_installer.py in un cartella che in seguito potremo raggiungere
 
-	7 - Navigate nella shell per posizionarvi sulla cartella in cui avete estratto il file modules_installer.py.
+	2 - Avviare "Osgeo4W Shell" facendo tasto destra "Esegui come amministratore". Potete cercarla sotto Avvio o Start -> Programmi ->QGIS 
+
+	3 - Nella shell digitate: >>py3_env e date invio.
+
+	4 - Navigate nella shell per posizionarvi sulla cartella in cui avete estratto il file modules_installer.py.
 	Se non lo avete mai fatto sappiate che il comand cd sta per choos directory e vi permette di scegliere una cartella in cui entrare; il simbolo composto cd <SPAZIO> e due punti fermi consecutivi, ovvero cd .. serve per andare indietro di una cartella. 
 
 	Quindi se abbiamo estratto sotto al nostro utente il file, nella console scriviamo >>cd C:\\users\\nomedelmioutente\\ e date invio.
@@ -56,26 +76,6 @@ VAI DIRETTAMENTE ALLO STEP 9. PUOI SALTARE QUESTI PASSAGGI, MA NEL CASO NON ANDA
 	Vi appariranno tutti i file che sono presenti nella vostra cartella utente. Guardate se c'è il file modules_installer.py.
 	Se c'è allora proseguite allo step 8 altrimenti rifate lo step 7.
 
-	8 - digitate nella shell il seguente comando >>python modules_installer.py e date invio. Una volta terminato il processo potete chiudere la shell.
-	
------------
+	5 - digitate nella shell il seguente comando >>python modules_installer.py e date invio. Una volta terminato il processo potete chiudere la shell.
 
-9 - Lanciate QGIS.
-
-10 - Dal menù in alto cercate Plugins->Gestici e installa plugin... 
-
-A - SE NON AVETE ALTRE VERSIONI di pyArchInit installate procedete con: selezionate la sezione "Installa da zip". Selezionate il file pyarchinit-release-xxx.zip e cliccate su "Installa plugin". Attendete. 
-
-
-B - SE AVETE ALTRE VERSIONI di pyArchInit installate , DISINSTALLATELE e poi ripetete il passaggio A.
-
-
-11 - Se vi appare correttamente il plugin, andate nelle configurazioni di pyArchInit cliccando sul pulsante
-
-.. image:: ./_images/img_51.PNG
-   :align: center
-   
-Andate nella sezione "Graphviz", cliccate sui "..." (tre puntini) e cercate il percorso alla cartella bin di Graphviz (indicativamente dovrebbe essere C:/Program Files (x86)/Graphviz2.38/bin).  Cliccate su Salva.
-
-12 - Riavviate QGIS e buon lavoro!!!
 
