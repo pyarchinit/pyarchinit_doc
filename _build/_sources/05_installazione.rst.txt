@@ -21,7 +21,7 @@ Se volete seguire step by step il tutorial tramite video, tenete aperto questo l
 Al momento stiamo testando il porting dalla versione 2.7 di Python alla versione 3. Il nuovo pyArchInit andrà sotto al nome di pyArchInit 3 - Garibaldi.
 Se vuoi aiutarci a correggere i problemi e gli errori segui questi semplici step.
 
-!!!!WARNING!!!! L'installazione crea una cartella di nome "pyarchinit" all'interno del vostro utente.
+!!!!WARNING!!!! Se siete alla prima installazione, pyArchInit crea una cartella di nome "pyarchinit" all'interno del vostro utente.
 
 Sinceratevi che sotto a "C:\\Utenti\\vostroutente\\" non vi sia alcuna cartella chiamata "pyarchinit". !!!!WARNING!!!!
 
@@ -29,11 +29,14 @@ Sinceratevi che sotto a "C:\\Utenti\\vostroutente\\" non vi sia alcuna cartella 
 
 2 - Scaricare Graphviz da http://www.graphviz.org/ e installatelo.
 
-3 - Scaricare la release più recente di pyarchinit da: https://github.com/pyarchinit/pyarchinit/releases
+3 - Scaricare la release più recente di pyarchinit da: https://github.com/pyarchinit/pyarchinit/archive/master.zip
+(Il codice è scaricato dal repository ufficiale https://github.com/pyarchinit/pyarchinit)
+
+VAI DIRETTAMENTE ALLO STEP 9. PUOI SALTARE QUESTI PASSAGGI, MA NEL CASO NON ANDASSE A BUON FINE PROVA IL SEGUENTE METODO.
 
 -----------
 
-VAI DIRETTAMENTE ALLO STEP 9. PUOI SALTARE QUESTI PASSAGGI, MA NEL CASO NON ANDASSE A BUON FINE PROVA IL SEGUENTE METODO.
+
 
 	4 - Estrarre dalla cartella pyarchinit-release-xxx/scripts il file modules_installer.py in un cartella che in seguito potremo raggiungere
 
@@ -59,7 +62,7 @@ VAI DIRETTAMENTE ALLO STEP 9. PUOI SALTARE QUESTI PASSAGGI, MA NEL CASO NON ANDA
 
 9 - Lanciate QGIS.
 
-10 - Dal menù in altro cercate Plugins->Gestici e installa plugin... 
+10 - Dal menù in alto cercate Plugins->Gestici e installa plugin... 
 
 A - SE NON AVETE ALTRE VERSIONI di pyArchInit installate procedete con: selezionate la sezione "Installa da zip". Selezionate il file pyarchinit-release-xxx.zip e cliccate su "Installa plugin". Attendete. 
 
